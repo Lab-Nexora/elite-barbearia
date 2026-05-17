@@ -142,6 +142,7 @@
                 <a href="#cortes" class="nav-link">Cortes</a>
                 <a href="#produtos" class="nav-link">Produtos</a>
                 <a href="#planos" class="nav-link">Planos</a>
+                <a href="#avaliacoes" class="nav-link">Avaliações</a>
                 <a href="#contato" class="nav-link">Contato</a>
             </nav>
             <a href="https://cashbarber.com.br/elitebarbeariatp/inicio/agendamento/novo-agendamento" class="btn-cta" target="_blank" rel="noopener">Agendar</a>
@@ -158,6 +159,7 @@
                 <a href="#cortes" class="mobile-link">Cortes</a>
                 <a href="#produtos" class="mobile-link">Produtos</a>
                 <a href="#planos" class="mobile-link">Planos</a>
+                <a href="#avaliacoes" class="mobile-link">Avaliações</a>
                 <a href="#contato" class="mobile-link">Contato</a>
                 <a href="https://cashbarber.com.br/elitebarbeariatp/inicio/agendamento/novo-agendamento" class="btn-cta-mobile" target="_blank" rel="noopener">Agendar</a>
             </nav>
@@ -442,6 +444,62 @@
                 </div>
             </div>
         </section>
+        <section id="avaliacoes" class="avaliacoes-section" aria-labelledby="titulo-avaliacoes" role="region">
+            <div class="avaliacoes-wrapper">
+                <div class="avaliacoes-header">
+                    <h2 id="titulo-avaliacoes" class="avaliacoes-title">
+                        <span class="avaliacoes-title-light">AVALIAÇÕES </span>
+                        <span class="avaliacoes-title-highlight">DOS CLIENTES</span>
+                    </h2>
+                    <div class="section-divider"></div>
+                    <p class="avaliacoes-subtitle secondary-text">O que nossos clientes dizem sobre nós</p>
+                </div>
+
+                <div class="avaliacoes-stats">
+                    <div class="avaliacoes-stat">
+                        <p class="stat-numero">4.9</p>
+                        <div class="stat-estrelas" aria-label="4.9 de 5 estrelas">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star-half-stroke" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="avaliacoes-stat-divider" aria-hidden="true"></div>
+                    <div class="avaliacoes-stat">
+                        <p class="stat-numero">200+</p>
+                        <p class="stat-label secondary-text">Avaliações</p>
+                    </div>
+                    <div class="avaliacoes-stat-divider" aria-hidden="true"></div>
+                    <div class="avaliacoes-stat">
+                        <p class="stat-numero">98%</p>
+                        <p class="stat-label secondary-text">Clientes Satisfeitos</p>
+                    </div>
+                </div>
+
+                <div class="avaliacoes-carousel-outer">
+                    <button class="avaliacoes-nav avaliacoes-prev" type="button" aria-label="Avaliação anterior">
+                        <span aria-hidden="true">&#10094;</span>
+                    </button>
+                    <div class="avaliacoes-track-wrapper" aria-live="polite" aria-label="Carrossel de avaliações">
+                        <div class="avaliacoes-track" id="avaliacoes-track"></div>
+                    </div>
+                    <button class="avaliacoes-nav avaliacoes-next" type="button" aria-label="Próxima avaliação">
+                        <span aria-hidden="true">&#10095;</span>
+                    </button>
+                </div>
+
+                <div class="avaliacoes-dots" id="avaliacoes-dots" role="tablist" aria-label="Navegação do carrossel de avaliações"></div>
+
+                <div class="avaliacoes-cta-wrapper">
+                    <a href="https://wa.me/5535998787291?text=Ol%C3%A1!%20Gostaria%20de%20deixar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20a%20Elite%20Barbearia."
+                       class="btn-primary" target="_blank" rel="noopener">
+                        Deixe sua Avaliação
+                    </a>
+                </div>
+            </div>
+        </section>
         <section id="contato" class="contato-section" aria-labelledby="titulo-contato" role="region">
             <div class="contato-wrapper">
                 <div class="contato-header">
@@ -498,6 +556,7 @@
                 <li><a href="#sobre">SOBRE</a></li>
                 <li><a href="#cortes">CORTES</a></li>
                 <li><a href="#planos">PLANOS</a></li>
+                <li><a href="#avaliacoes">AVALIAÇÕES</a></li>
             </ul>
         </div>
         <div>
@@ -769,5 +828,174 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollToPlugin.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+    (function () {
+        var avaliacoes = [
+            { nome: 'Rafael Silva',    inicial: 'R', cor: '#f97316', servico: 'Corte + Barba',    nota: 5, texto: 'Melhor barbearia da cidade! Saí diferente, com estilo e muita confiança. Atendimento impecável do começo ao fim.', tempo: 'há 1 semana' },
+            { nome: 'Carlos Eduardo',  inicial: 'C', cor: '#e55a0d', servico: 'Degradê',           nota: 5, texto: 'Primeira vez que fui e já virei cliente fiel. O ambiente é top, os profissionais sabem o que fazem. Muito satisfeito!', tempo: 'há 2 semanas' },
+            { nome: 'Marcos Antônio',  inicial: 'M', cor: '#c2410c', servico: 'Corte Moderno',    nota: 5, texto: 'Saí com um corte incrível. Muito cuidadoso com os detalhes, entendeu exatamente o que eu queria. Recomendo a todos.', tempo: 'há 3 semanas' },
+            { nome: 'João Pedro',      inicial: 'J', cor: '#ea580c', servico: 'Barba',             nota: 5, texto: 'A barba ficou impecável! Atendimento nota 10, ambiente super agradável e preço totalmente justo. Já sou cliente fiel.', tempo: 'há 1 mês' },
+            { nome: 'Thiago Oliveira', inicial: 'T', cor: '#fb923c', servico: 'Plano Premium',    nota: 5, texto: 'Vale cada centavo do plano! Corte e barba toda semana, sempre bem-feito. Profissionalismo total desde o primeiro dia.', tempo: 'há 1 mês' },
+            { nome: 'Lucas Mendes',    inicial: 'L', cor: '#d97706', servico: 'Corte Premium',    nota: 5, texto: 'Incrível como um corte pode mudar tudo! O pessoal da Elite manda muito bem. Virei fã e indico para todos os amigos!', tempo: 'há 6 semanas' },
+            { nome: 'André Fernandes', inicial: 'A', cor: '#b45309', servico: 'Social Moderno',   nota: 5, texto: 'Ambiente sofisticado e profissional. Me senti em outra categoria de barbearia. Top demais, voltarei com certeza!', tempo: 'há 2 meses' },
+            { nome: 'Bruno Alves',     inicial: 'B', cor: '#92400e', servico: 'Degradê + Barba',  nota: 5, texto: 'O melhor atendimento que já tive numa barbearia. Equipe muito qualificada e atenciosa. Voltarei sempre!', tempo: 'há 2 meses' }
+        ];
+
+        var track = document.getElementById('avaliacoes-track');
+        var dotsContainer = document.getElementById('avaliacoes-dots');
+        if (!track || !dotsContainer) return;
+
+        avaliacoes.forEach(function (av) {
+            var estrelas = '';
+            for (var s = 0; s < 5; s++) {
+                estrelas += '<i class="fa-solid fa-star' + (s >= av.nota ? ' vazia' : '') + '" aria-hidden="true"></i>';
+            }
+            var el = document.createElement('article');
+            el.className = 'avaliacao-card';
+            el.setAttribute('role', 'article');
+            el.setAttribute('aria-label', 'Avaliação de ' + av.nome);
+            el.innerHTML =
+                '<span class="avaliacao-quote" aria-hidden="true">“</span>' +
+                '<div class="avaliacao-header">' +
+                    '<div class="avaliacao-avatar" style="background-color:' + av.cor + '22;border-color:' + av.cor + ';" aria-hidden="true">' + av.inicial + '</div>' +
+                    '<div class="avaliacao-autor-info">' +
+                        '<h3 class="avaliacao-nome">' + av.nome + '</h3>' +
+                        '<div class="avaliacao-estrelas" role="img" aria-label="' + av.nota + ' de 5 estrelas">' + estrelas + '</div>' +
+                    '</div>' +
+                '</div>' +
+                '<p class="avaliacao-texto">' + av.texto + '</p>' +
+                '<footer class="avaliacao-rodape">' +
+                    '<span class="avaliacao-servico">' + av.servico + '</span>' +
+                    '<span class="avaliacao-data">' + av.tempo + '</span>' +
+                '</footer>';
+            track.appendChild(el);
+        });
+
+        var cards = track.querySelectorAll('.avaliacao-card');
+        var prevBtn = document.querySelector('.avaliacoes-prev');
+        var nextBtn = document.querySelector('.avaliacoes-next');
+        var trackWrapper = document.querySelector('.avaliacoes-track-wrapper');
+        var currentIndex = 0;
+        var autoPlayTimer = null;
+        var GAP = 24;
+
+        function getVisible() {
+            if (window.innerWidth >= 1024) return 3;
+            if (window.innerWidth >= 768) return 2;
+            return 1;
+        }
+        function getMaxIndex() { return Math.max(0, cards.length - getVisible()); }
+
+        function updateWidths() {
+            var vis = getVisible();
+            var w = (trackWrapper.offsetWidth - GAP * (vis - 1)) / vis;
+            cards.forEach(function (c) { c.style.width = w + 'px'; });
+            return w;
+        }
+
+        function updateTransform() {
+            var w = updateWidths();
+            track.style.transform = 'translateX(-' + (currentIndex * (w + GAP)) + 'px)';
+        }
+
+        function updateDots() {
+            var vis = getVisible();
+            var total = Math.ceil(cards.length / vis);
+            var active = Math.floor(currentIndex / vis);
+            dotsContainer.innerHTML = '';
+            for (var i = 0; i < total; i++) {
+                (function (idx) {
+                    var btn = document.createElement('button');
+                    btn.className = 'avaliacoes-dot' + (idx === active ? ' ativo' : '');
+                    btn.setAttribute('role', 'tab');
+                    btn.setAttribute('aria-selected', idx === active ? 'true' : 'false');
+                    btn.setAttribute('aria-label', 'Página ' + (idx + 1) + ' de avaliações');
+                    btn.addEventListener('click', function () {
+                        currentIndex = Math.min(idx * getVisible(), getMaxIndex());
+                        refresh();
+                    });
+                    dotsContainer.appendChild(btn);
+                })(i);
+            }
+        }
+
+        function updateBtns() {
+            if (prevBtn) prevBtn.disabled = currentIndex <= 0;
+            if (nextBtn) nextBtn.disabled = currentIndex >= getMaxIndex();
+        }
+
+        function refresh() {
+            updateTransform();
+            updateDots();
+            updateBtns();
+        }
+
+        function goTo(idx) {
+            currentIndex = Math.max(0, Math.min(idx, getMaxIndex()));
+            refresh();
+        }
+
+        function goNext() {
+            if (currentIndex >= getMaxIndex()) {
+                track.style.transition = 'none';
+                currentIndex = 0;
+                updateTransform();
+                requestAnimationFrame(function () {
+                    track.style.transition = '';
+                    updateDots();
+                    updateBtns();
+                });
+            } else {
+                goTo(currentIndex + 1);
+            }
+        }
+
+        function goPrev() { goTo(currentIndex - 1); }
+
+        if (prevBtn) prevBtn.addEventListener('click', goPrev);
+        if (nextBtn) nextBtn.addEventListener('click', goNext);
+
+        function startAuto() { autoPlayTimer = setInterval(goNext, 5500); }
+        function stopAuto() { clearInterval(autoPlayTimer); }
+
+        var outer = document.querySelector('.avaliacoes-carousel-outer');
+        if (outer) {
+            outer.addEventListener('mouseenter', stopAuto);
+            outer.addEventListener('mouseleave', startAuto);
+        }
+
+        var txStart = 0;
+        trackWrapper.addEventListener('touchstart', function (e) { txStart = e.touches[0].clientX; stopAuto(); }, { passive: true });
+        trackWrapper.addEventListener('touchend', function (e) {
+            var diff = txStart - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 50) { if (diff > 0) goNext(); else goPrev(); }
+            startAuto();
+        }, { passive: true });
+
+        var resizeTimer;
+        window.addEventListener('resize', function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(function () {
+                if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+                refresh();
+            }, 200);
+        }, { passive: true });
+
+        var animEls = document.querySelectorAll('.avaliacoes-header, .avaliacoes-stats, .avaliacoes-carousel-outer, .avaliacoes-dots, .avaliacoes-cta-wrapper');
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visivel');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        animEls.forEach(function (el) { io.observe(el); });
+
+        refresh();
+        startAuto();
+    })();
+    </script>
 </body>
 </html>
