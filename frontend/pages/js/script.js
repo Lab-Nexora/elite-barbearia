@@ -31,14 +31,12 @@ gsap.utils.toArray(".plan-card").forEach((card) => {
         opacity: 0,
         filter: "blur(10px)",
         scale: 0.95,
-        immediateRender: false,
         scrollTrigger: {
             trigger: card,
             start: "top 85%",
-            end: "top 60%",
-            scrub: 1, 
+            toggleActions: "play none none none",
         },
-        duration: 1,
+        duration: 0.8,
         ease: "power3.out"
     });
 });
