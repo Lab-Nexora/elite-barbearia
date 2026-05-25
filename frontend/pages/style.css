@@ -116,6 +116,12 @@ header.scrolled {
 .nav-link.active {
     color: var(--cor-laranja);
 }
+.nav-link.active {
+    font-weight: 700;
+}
+.nav-link.active::after {
+    height: 3px;
+}
 .nav-link::after {
     content: '';
     position: absolute;
@@ -172,7 +178,7 @@ header.scrolled {
 }
 
 .hamburger:hover,
-.hamburger:focus {
+.hamburger:focus-visible {
     background-color: rgba(249, 115, 22, 0.1);
     outline: 2px solid rgba(249, 115, 22, 0.5);
     outline-offset: 2px;
@@ -187,12 +193,14 @@ header.scrolled {
 }
 .hamburger.active .hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
+    z-index: 1000;
 }
 .hamburger.active .hamburger-line:nth-child(2) {
     opacity: 0;
 }
 .hamburger.active .hamburger-line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+    z-index: 1000;
 }
 
 /* Menu mobile (aberto pelo hamburger) */
@@ -564,6 +572,32 @@ p {
     color: var(--cor-laranja);
     margin-top: 0.15rem;
 }
+.plan-cta {
+    display: block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: #f97316;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+.plan-cta:hover,
+.plan-cta:focus-visible {
+    background: #e55a0d;
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
+    outline: 3px solid rgba(249, 115, 22, 0.25);
+}
+.plan-cta-featured {
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.35);
+}
 .links a {
     color: hsla(0, 0%, 100%, 0.7);
     display: inline-block;
@@ -665,6 +699,9 @@ section h2 {
 .corte-trigger:focus-visible {
     outline: 3px solid rgba(249, 115, 22, 0.85);
     outline-offset: 4px;
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+    border-color: rgba(249, 115, 22, 0.5);
 }
 .corte-image {
     width: 100%;
@@ -1014,7 +1051,7 @@ body.modal-open {
     }
 
     .cortes-section {
-        padding: 8rem 1rem;
+        padding: 5rem 1rem;
     }
     .cortes-wrapper {
         padding: 0 5rem;
@@ -1031,7 +1068,7 @@ body.modal-open {
     }
 
     .sobre-section {
-        padding: 8rem 1rem;
+        padding: 5rem 1rem;
     }
     .sobre-wrapper {
         padding: 0 5rem;
@@ -1596,19 +1633,59 @@ body.modal-open {
 .contato-cards {
     display: flex;
     justify-content: center;
-    gap: 50px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .contato-card {
+    display: block;
     background: #1A1A1A;
     border: 1px solid rgba(249, 115, 22, 0.2);
     border-radius: 12px;
-    padding: 50px;
-    width: 300px;
+    padding: 28px 24px;
+    width: 220px;
     transition: 0.3s;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+.contato-card h3,
+.contato-card p {
+    color: inherit;
+}
+
+.contato-emblem-icon {
+    font-size: 2.2rem;
+    color: var(--cor-laranja);
+    line-height: 1;
+}
+
+.contato-card-horarios:hover {
+    cursor: default;
+    transform: none;
+    border-color: rgba(249, 115, 22, 0.2);
+    box-shadow: none;
+}
+
+.contato-horarios-lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.contato-horarios-lista li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    color: #A0A0A0;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 0.25rem 0;
+    border-bottom: 1px solid rgba(249, 115, 22, 0.1);
+}
+.contato-horarios-lista li:last-child {
+    border-bottom: none;
 }
 
 .contato-card:hover {
@@ -1626,8 +1703,11 @@ body.modal-open {
 
 .contato-emblem-wrap {
     flex-shrink: 0;
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contato-emblem {
     width: 100%;
@@ -1671,7 +1751,7 @@ body.modal-open {
     .contato-section { padding: 8rem 1rem; }
     .contato-wrapper { padding: 0 5rem; }
     .contato-title { font-size: 4rem; }
-    .contato-emblem-wrap { width: 80px; height: 80px; }
+    .contato-emblem-wrap { width: 64px; height: 64px; }
 }
 @media (max-width: 767px) {
     .contato-section {
@@ -1697,8 +1777,8 @@ body.modal-open {
         margin: 0;
     }
     .contato-emblem-wrap {
-        width: 60px;
-        height: 60px;
+        width: 52px;
+        height: 52px;
     }
     .contato-card-content {
         text-align: center;
@@ -1806,6 +1886,18 @@ footer > small {
         font-size: 13px;
     }
 }
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .header-container {
+        padding: 0 40px;
+    }
+    .menu {
+        gap: 24px;
+    }
+    .btn-cta {
+        padding: 12px 20px;
+        font-size: 0.8rem;
+    }
+}
 @media (max-width: 768px) {
     .header-container {
         padding: 0 24px;
@@ -1848,17 +1940,21 @@ footer > small {
         flex: 1 1 100%;
         max-width: 100%;
     }
+    footer .brand {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     footer .brand img {
         max-width: 90px;
         margin: 0 auto;
     }
     footer h3 {
-        text-align: center;
+        text-align: left;
         font-size: 0.95rem;
         margin-bottom: 0.75rem;
     }
     footer li {
-        text-align: center;
+        text-align: left;
         font-size: 0.9rem;
     }
     .social-icons {
@@ -1994,7 +2090,7 @@ footer > small {
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 15px rgba(37, 211, 102, 0.6);
-    z-index: 999;
+    z-index: 100;
     transition: 0.3s;
     border: 2px solid #fff;
     text-decoration: none;
@@ -2021,5 +2117,142 @@ footer > small {
 
     .whatsapp-card i {
         font-size: 30px;
+    }
+}
+
+/* =========================
+   LGPD BANNER
+   ========================= */
+.lgpd-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #1a1a1a;
+    border-top: 2px solid var(--cor-laranja);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+}
+.lgpd-banner.visivel {
+    transform: translateY(0);
+}
+.lgpd-texto {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    flex: 1;
+    min-width: 200px;
+}
+.lgpd-btn {
+    background: var(--cor-laranja);
+    color: #000;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.lgpd-btn:hover,
+.lgpd-btn:focus-visible {
+    background: #e55a0d;
+    transform: translateY(-1px);
+    outline: 3px solid rgba(249, 115, 22, 0.3);
+}
+@media (max-width: 480px) {
+    .lgpd-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+    .lgpd-btn {
+        align-self: flex-end;
+    }
+}
+
+/* =========================
+   CARROSSEL — BOTÃO DE PAUSA
+   ========================= */
+.avaliacoes-pause-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.75rem;
+}
+.avaliacoes-pause-btn {
+    background: transparent;
+    border: 1px solid rgba(249, 115, 22, 0.4);
+    color: rgba(249, 115, 22, 0.8);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+.avaliacoes-pause-btn:hover,
+.avaliacoes-pause-btn:focus-visible {
+    background: rgba(249, 115, 22, 0.12);
+    border-color: var(--cor-laranja);
+    outline: 2px solid rgba(249, 115, 22, 0.3);
+}
+
+/* =========================
+   BOTÃO VOLTAR AO TOPO
+   ========================= */
+.back-to-top {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    z-index: 9998;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--cor-laranja);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 14px rgba(249, 115, 22, 0.45);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.2s ease;
+    opacity: 0;
+    transform: translateY(12px);
+}
+.back-to-top.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+.back-to-top:hover,
+.back-to-top:focus-visible {
+    background: #e55a0d;
+    outline: 3px solid rgba(249, 115, 22, 0.3);
+}
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 80px;
+        right: 12px;
+        width: 42px;
+        height: 42px;
     }
 }

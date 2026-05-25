@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Performance: preconnect e preload -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="Imagens/imagemdefundohome.jpeg" fetchpriority="high">
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
     <title>Elite Barbearia | Barbearia Premium em Três Pontas - MG</title>
     <meta name="description" content="Elite Barbearia em Três Pontas, Minas Gerais. Cortes masculinos, barba, produtos premium e planos. Agende seu horário online!">
@@ -136,7 +140,7 @@
             <a href="#home" class="logo-link">
                 <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" class="logo-nav">
             </a>
-            <nav class="menu" role="navigation" aria-label="Navegação principal">
+            <nav class="menu" role="navigation" aria-label="Navegação principal" aria-hidden="false">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#sobre" class="nav-link">Sobre</a>
                 <a href="#cortes" class="nav-link">Cortes</a>
@@ -190,7 +194,7 @@
                 <div class="sobre-grid">
                     <div class="sobre-visual">
                         <div class="sobre-foto-frame">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Interior moderno da Elite Barbearia" class="sobre-foto">
+                            <img src="Imagens/imagemdefundohome.jpeg" alt="Interior moderno da Elite Barbearia" class="sobre-foto" loading="lazy">
                         </div>
                         <div class="sobre-mapa-frame">
                             <iframe
@@ -210,7 +214,7 @@
                         <article class="about-card" aria-labelledby="titulo-missao">
                             <div class="about-card-row">
                                 <div class="about-emblem-wrap">
-                                    <img src="Imagens/Missão.png" alt="Ícone de barber pole com louros" class="about-emblem">
+                                    <img src="Imagens/Missão.png" alt="Ícone de barber pole com louros" class="about-emblem" loading="lazy">
                                 </div>
                                 <div class="card-content">
                                     <h3 id="titulo-missao">Missão</h3>
@@ -221,7 +225,7 @@
                         <article class="about-card" aria-labelledby="titulo-visao">
                             <div class="about-card-row">
                                 <div class="about-emblem-wrap">
-                                    <img src="Imagens/Visão.png" alt="Ícone de navalhas com âncora" class="about-emblem">
+                                    <img src="Imagens/Visão.png" alt="Ícone de navalhas com âncora" class="about-emblem" loading="lazy">
                                 </div>
                                 <div class="card-content">
                                     <h3 id="titulo-visao">Visão</h3>
@@ -232,7 +236,7 @@
                         <article class="about-card" aria-labelledby="titulo-valores">
                             <div class="about-card-row">
                                 <div class="about-emblem-wrap">
-                                    <img src="Imagens/Valores.png" alt="Ícone de leão com escudo" class="about-emblem">
+                                    <img src="Imagens/Valores.png" alt="Ícone de leão com escudo" class="about-emblem" loading="lazy">
                                 </div>
                                 <div class="card-content">
                                     <h3 id="titulo-valores">Valores</h3>
@@ -345,43 +349,43 @@
                 </div>
                 <div class="produto-cards">
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Pomada Modeladora Elite Barbearia">
+                        <img src="Imagens/imagemdefundohome.jpeg" alt="Pomada Modeladora Elite Barbearia" loading="lazy">
                         <div class="produto-info">
                             <h3 class="produto-titulo">POMADA MODELADORA</h3>
                             <p class="produto-preco">R$ 79,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi a Pomada Modeladora pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank">
-                                Ver Sobre
-                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi a Pomada Modeladora pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                                Comprar via WhatsApp
+</a>
                         </div>
                     </div>
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Óleo para Barba Elite Barbearia">
+                        <img src="Imagens/imagemdefundohome.jpeg" alt="Óleo para Barba Elite Barbearia" loading="lazy">
                         <div class="produto-info">
                             <h3 class="produto-titulo">ÓLEO PARA BARBA</h3>
                             <p class="produto-preco">R$ 59,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Óleo para Barba pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank">
-                                Ver Sobre
-                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Óleo para Barba pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                                Comprar via WhatsApp
+</a>
                         </div>
                     </div>
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Shampoo Premium Elite Barbearia">
+                        <img src="Imagens/imagemdefundohome.jpeg" alt="Shampoo Premium Elite Barbearia" loading="lazy">
                         <div class="produto-info">
                             <h3 class="produto-titulo">SHAMPOO PREMIUM</h3>
                             <p class="produto-preco">R$ 49,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Shampoo Premium pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank">
-                                Ver Sobre
-                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Shampoo Premium pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                                Comprar via WhatsApp
+</a>
                         </div>
                     </div>
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Balm Hidratante Elite Barbearia">
+                        <img src="Imagens/imagemdefundohome.jpeg" alt="Balm Hidratante Elite Barbearia" loading="lazy">
                         <div class="produto-info">
                             <h3 class="produto-titulo">BALM HIDRATANTE</h3>
                             <p class="produto-preco">R$ 54,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Balm Hidratante pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank">
-                                Ver Sobre
-                            </a>
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Balm Hidratante pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                                Comprar via WhatsApp
+</a>
                         </div>
                     </div>
                 </div>
@@ -409,12 +413,34 @@
                             <li><i class="fa-solid fa-check"></i>Raspado na Máquina</li>
                             <li><i class="fa-solid fa-check"></i>Serviços Extras 10% de Desconto</li>
                             <li><i class="fa-solid fa-check"></i>Produtos 10% de Desconto</li>
-
                         </ul>
+                        <a href="https://wa.me/5535998787291?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20B%C3%A1sico%20(R%24%2074%2C90%2Fm%C3%AAs).%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F"
+                           class="plan-cta" target="_blank" rel="noopener noreferrer"
+                           aria-label="Assinar Plano Básico via WhatsApp">
+                            Assinar via WhatsApp
+                        </a>
                     </article>
 
-                    <article class="plan-card plan-card-featured" aria-labelledby="plano-premium-titulo">
+                    <article class="plan-card plan-card-featured" aria-labelledby="plano-elite-titulo">
                         <span class="plan-badge">Mais escolhido</span>
+                        <h3 id="plano-elite-titulo" class="plan-card-title">Elite</h3>
+                        <p class="plan-price">R$ 89,90</p>
+                        <p class="plan-cuts">4 cortes por mês</p>
+                        <ul class="plan-benefits">
+                            <li><i class="fa-solid fa-check"></i>Corte de Cabelo</li>
+                            <li><i class="fa-solid fa-check"></i>Barba Ilimitada</li>
+                            <li><i class="fa-solid fa-check"></i>Cavanhaque</li>
+                            <li><i class="fa-solid fa-check"></i>Serviços Extras 10% de Desconto</li>
+                            <li><i class="fa-solid fa-check"></i>Produtos 10% de Desconto</li>
+                        </ul>
+                        <a href="https://wa.me/5535998787291?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20Elite%20(R%24%2089%2C90%2Fm%C3%AAs).%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F"
+                           class="plan-cta plan-cta-featured" target="_blank" rel="noopener noreferrer"
+                           aria-label="Assinar Plano Elite via WhatsApp">
+                            Assinar via WhatsApp
+                        </a>
+                    </article>
+
+                    <article class="plan-card" aria-labelledby="plano-premium-titulo">
                         <h3 id="plano-premium-titulo" class="plan-card-title">Premium</h3>
                         <p class="plan-price">R$ 139,90</p>
                         <p class="plan-cuts">8 cortes por mês</p>
@@ -427,19 +453,11 @@
                             <li><i class="fa-solid fa-check"></i>Serviços Extras 10% de Desconto</li>
                             <li><i class="fa-solid fa-check"></i>Produtos 10% de Desconto</li>
                         </ul>
-                    </article>
-
-                    <article class="plan-card" aria-labelledby="plano-elite-titulo">
-                        <h3 id="plano-elite-titulo" class="plan-card-title">Elite</h3>
-                        <p class="plan-price">R$ 89,90</p>
-                        <p class="plan-cuts">4 cortes por mês</p>
-                        <ul class="plan-benefits">
-                            <li><i class="fa-solid fa-check"></i>Corte de Cabelo</li>
-                            <li><i class="fa-solid fa-check"></i>Barba Ilimitada</li>
-                            <li><i class="fa-solid fa-check"></i>Cavanhaque</li>
-                            <li><i class="fa-solid fa-check"></i>Serviços Extras 10% de Desconto</li>
-                            <li><i class="fa-solid fa-check"></i>Produtos 10% de Desconto</li>
-                        </ul>
+                        <a href="https://wa.me/5535998787291?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Plano%20Premium%20(R%24%20139%2C90%2Fm%C3%AAs).%20Pode%20me%20passar%20mais%20informa%C3%A7%C3%B5es%3F"
+                           class="plan-cta" target="_blank" rel="noopener noreferrer"
+                           aria-label="Assinar Plano Premium via WhatsApp">
+                            Assinar via WhatsApp
+                        </a>
                     </article>
                 </div>
             </div>
@@ -492,8 +510,15 @@
 
                 <div class="avaliacoes-dots" id="avaliacoes-dots" role="tablist" aria-label="Navegação do carrossel de avaliações"></div>
 
+                <div class="avaliacoes-pause-wrap">
+                    <button id="avaliacoes-pause" class="avaliacoes-pause-btn" type="button"
+                            aria-label="Pausar carrossel de avaliações" aria-pressed="false">
+                        <i class="fa-solid fa-pause" aria-hidden="true"></i>
+                    </button>
+                </div>
+
                 <div class="avaliacoes-cta-wrapper">
-                    <a href="https://wa.me/5535998787291?text=Ol%C3%A1!%20Gostaria%20de%20deixar%20uma%20avalia%C3%A7%C3%A3o%20sobre%20a%20Elite%20Barbearia."
+                    <a href="https://www.google.com/maps/place/Elite+Barbearia/@-21.3743847,-45.5108926,19z/data=!4m8!3m7!1s0x94ca83b79324f893:0x3db6902b7c755393!8m2!3d-21.3743847!4d-45.5108926!9m1!1b1!16s%2Fg%2F11xvyjd680?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
                        class="btn-primary" target="_blank" rel="noopener">
                         Deixe sua Avaliação
                     </a>
@@ -507,36 +532,56 @@
                 </div>
                 <div class="section-divider"></div>
                 <div class="contato-cards">
-                    <article class="contato-card">
+                    <a href="https://wa.me/5535998787291" class="contato-card" target="_blank"
+                       rel="noopener noreferrer" role="article" aria-label="Contato via WhatsApp: (35) 99878-7291">
                         <div class="contato-card-row">
                             <div class="contato-emblem-wrap">
-                                <img src="Imagens/whatsapplogo.png" alt="Ícone do WhatsApp" class="contato-emblem">
+                                <img src="Imagens/whatsapplogo.png" alt="Ícone do WhatsApp" class="contato-emblem" loading="lazy">
                             </div>
                             <div class="contato-card-content">
                                 <h3>WhatsApp</h3>
                                 <p>(35) 99878-7291</p>
                             </div>
                         </div>
-                    </article>
-                    <article class="contato-card">
+                    </a>
+                    <a href="https://www.instagram.com/elitebarbeariatp/" class="contato-card" target="_blank"
+                       rel="noopener noreferrer" role="article" aria-label="Instagram: @elitebarbearia">
                         <div class="contato-card-row">
                             <div class="contato-emblem-wrap">
-                                <img src="Imagens/instagram.png" alt="Ícone do Instagram" class="contato-emblem">
+                                <img src="Imagens/instagram.png" alt="Ícone do Instagram" class="contato-emblem" loading="lazy">
                             </div>
                             <div class="contato-card-content">
-                                 <h3>Instagram</h3>
-                                 <p>@elitebarbearia</p>
+                                <h3>Instagram</h3>
+                                <p>@elitebarbearia</p>
                             </div>
                         </div>
-                    </article>
-                    <article class="contato-card">
+                    </a>
+                    <a href="https://www.google.com/maps/place/Elite+Barbearia/@-21.3742344,-45.5109202,20.75z/data=!4m6!3m5!1s0x94ca83b79324f893:0x3db6902b7c755393!8m2!3d-21.3743847!4d-45.5108926!16s%2Fg%2F11xvyjd680?entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D" class="contato-card"
+                       target="_blank" rel="noopener noreferrer" role="article"
+                       aria-label="Abrir endereço no Google Maps: Nossa Senhora D'Ajuda, Centro, Três Pontas - MG">
                         <div class="contato-card-row">
                             <div class="contato-emblem-wrap">
-                                <img src="Imagens/location.png" alt="Ícone de localização" class="contato-emblem">
+                                <img src="Imagens/location.png" alt="Ícone de localização" class="contato-emblem" loading="lazy">
                             </div>
                             <div class="contato-card-content">
                                 <h3>Endereço</h3>
                                 <p>Nossa Senhora D'Ajuda - Centro<br>Três Pontas - MG, 37185-090</p>
+                            </div>
+                        </div>
+                    </a>
+                    <article class="contato-card contato-card-horarios" aria-label="Horários de funcionamento">
+                        <div class="contato-card-row">
+                            <div class="contato-emblem-wrap">
+                                <i class="fa-regular fa-clock contato-emblem-icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="contato-card-content">
+                                <h3>Horários</h3>
+                                <ul class="contato-horarios-lista">
+                                    <li><span>Segunda</span><span>10h – 17h</span></li>
+                                    <li><span>Ter a Sex</span><span>09h – 19h</span></li>
+                                    <li><span>Sábado</span><span>08h – 17h</span></li>
+                                    <li><span>Domingo</span><span>Fechado</span></li>
+                                </ul>
                             </div>
                         </div>
                     </article>
@@ -546,8 +591,8 @@
     </main>
     <footer id="footer">
         <div class="brand">
-            <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia">
-            <h4 class="secondary-text">Barbearia moderna com estilo e atitude.</h4>
+            <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" loading="lazy">
+            <p class="secondary-text">Barbearia moderna com estilo e atitude.</p>
         </div>
         <div class="links">
             <h3><span class="highlight">LINKS RÁPIDOS</span></h3>
@@ -571,12 +616,28 @@
         <div>
             <h3><span class="highlight">REDES SOCIAIS</span></h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/elitebarbeariatp/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/5535998787291" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/elitebarbeariatp/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5535998787291" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
         <small class="secondary-text">© 2026 Elite Barbearia. Todos os direitos reservados.</small>
     </footer>
+    <!-- Botão voltar ao topo -->
+    <button id="back-to-top" class="back-to-top" aria-label="Voltar ao topo" hidden>
+        <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Banner LGPD -->
+    <div id="lgpd-banner" class="lgpd-banner" role="dialog" aria-live="polite"
+         aria-label="Aviso sobre uso de cookies" aria-hidden="false">
+        <p class="lgpd-texto">
+            Utilizamos cookies para melhorar sua experiência de navegação.
+            Ao continuar usando o site, você concorda com o uso de cookies
+            em conformidade com a LGPD (Lei nº 13.709/2018).
+        </p>
+        <button type="button" id="lgpd-aceitar" class="lgpd-btn">Entendi</button>
+    </div>
+
     <!-- Bortao verde do WhatsApp -->
     <a href="https://wa.me/5535998787291" class="whatsapp-card" target="_blank" aria-label="Contato via WhatsApp">
         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
@@ -626,7 +687,7 @@
                 const expanded = hamburger.getAttribute('aria-expanded') === 'true';
                 hamburger.setAttribute('aria-expanded', !expanded);
                 mobileMenu.setAttribute('aria-hidden', expanded);
-                
+
                 // Bloqueia scroll quando menu está aberto
                 if (mobileMenu.classList.contains('active')) {
                     document.body.style.overflow = 'hidden';
@@ -818,6 +879,60 @@
             if(window.location.search || window.location.hash) {
                 window.history.replaceState(null,'',window.location.pathname)
             }
+
+            // Aria-hidden dinâmico na nav desktop
+            (function () {
+                var desktopNav = document.querySelector('.menu');
+                var mobileBreakpoint = window.matchMedia('(max-width: 768px)');
+                function updateNavAria(e) {
+                    if (desktopNav) {
+                        desktopNav.setAttribute('aria-hidden', e.matches ? 'true' : 'false');
+                    }
+                }
+                mobileBreakpoint.addEventListener('change', updateNavAria);
+                updateNavAria(mobileBreakpoint);
+            })();
+
+            // Botão voltar ao topo
+            (function () {
+                var btn = document.getElementById('back-to-top');
+                if (!btn) return;
+                btn.hidden = false;
+                window.addEventListener('scroll', function () {
+                    if (window.scrollY > 400) {
+                        btn.classList.add('visivel');
+                    } else {
+                        btn.classList.remove('visivel');
+                    }
+                }, { passive: true });
+                btn.addEventListener('click', function () {
+                    if (window.lenis) {
+                        window.lenis.scrollTo(0);
+                    } else {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            })();
+
+            // LGPD Banner
+            (function () {
+                var banner = document.getElementById('lgpd-banner');
+                var btn = document.getElementById('lgpd-aceitar');
+                if (!banner || !btn) return;
+                if (!localStorage.getItem('lgpd-aceito')) {
+                    banner.hidden = false;
+                    requestAnimationFrame(function () {
+                        banner.classList.add('visivel');
+                    });
+                }
+                btn.addEventListener('click', function () {
+                    banner.classList.remove('visivel');
+                    banner.addEventListener('transitionend', function () {
+                        banner.hidden = true;
+                    }, { once: true });
+                    localStorage.setItem('lgpd-aceito', '1');
+                });
+            })();
         });
     </script>
     <script>lucide.createIcons();</script>
@@ -992,6 +1107,25 @@
             });
         }, { threshold: 0.15 });
         animEls.forEach(function (el) { io.observe(el); });
+
+        var pauseBtn = document.getElementById('avaliacoes-pause');
+        var isPaused = false;
+        if (pauseBtn) {
+            pauseBtn.addEventListener('click', function () {
+                isPaused = !isPaused;
+                if (isPaused) {
+                    stopAuto();
+                    pauseBtn.setAttribute('aria-label', 'Retomar carrossel de avaliações');
+                    pauseBtn.setAttribute('aria-pressed', 'true');
+                    pauseBtn.querySelector('i').className = 'fa-solid fa-play';
+                } else {
+                    startAuto();
+                    pauseBtn.setAttribute('aria-label', 'Pausar carrossel de avaliações');
+                    pauseBtn.setAttribute('aria-pressed', 'false');
+                    pauseBtn.querySelector('i').className = 'fa-solid fa-pause';
+                }
+            });
+        }
 
         refresh();
         startAuto();
