@@ -170,6 +170,7 @@ header.scrolled {
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
+
 .hamburger:hover,
 .hamburger:focus {
     background-color: rgba(249, 115, 22, 0.1);
@@ -210,6 +211,7 @@ header.scrolled {
     visibility: hidden;
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
+
 .mobile-menu.active {
     opacity: 1;
     visibility: visible;
