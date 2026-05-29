@@ -456,6 +456,7 @@ p {
     position: relative;
     padding: 3rem 1rem;
     background-color: #101010;
+    margin-top: -30px;
 }
 .planos-wrapper {
     max-width: 1280px;
@@ -496,6 +497,9 @@ p {
     margin: 0 auto;
 }
 .plan-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%);
     border: 1px solid rgba(249, 115, 22, 0.25);
     border-radius: 10px;
@@ -558,6 +562,7 @@ p {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 .plan-benefits li {
     display: flex;
@@ -574,6 +579,7 @@ p {
 }
 .plan-cta {
     display: block;
+    margin-top: auto;
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     background: #f97316;
@@ -1609,6 +1615,7 @@ body.modal-open {
     position: relative;
     padding: 3rem 1rem;
     background-color: #101010;
+    margin-top: -30px;
 }
 
 .contato-wrapper {
@@ -2111,7 +2118,7 @@ footer > small {
     .whatsapp-card {
         width: 55px;
         height: 55px;
-        bottom: 15px;
+        bottom: 40px;
         right: 8px;
     }
 
@@ -2220,8 +2227,8 @@ footer > small {
    ========================= */
 .back-to-top {
     position: fixed;
-    bottom: 85px;
-    right: 20px;
+    bottom: 90px;
+    right: 25px;
     z-index: 9998;
     width: 48px;
     height: 48px;
@@ -2250,8 +2257,8 @@ footer > small {
 }
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 80px;
-        right: 12px;
+        bottom: 102px;
+        right: 15px;
         width: 42px;
         height: 42px;
     }
