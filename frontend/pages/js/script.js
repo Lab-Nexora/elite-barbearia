@@ -137,6 +137,24 @@ document.querySelectorAll(".plan-card").forEach(card => {
 
 });
 
+// ANIMACAO DE ENTRADA DOS CARDS DE CORTES
+gsap.utils.toArray(".corte-card").forEach((card, i) => {
+    gsap.from(card, {
+        y: 60,
+        opacity: 0,
+        filter: "blur(8px)",
+        scale: 0.95,
+        scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            toggleActions: "play none none none",
+        },
+        duration: 0.7,
+        delay: i * 0.08,
+        ease: "power3.out"
+    });
+});
+
 //EFEITO PARALAX
 
 gsap.to("#home.hero ", {
