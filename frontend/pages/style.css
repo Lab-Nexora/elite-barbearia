@@ -1,7 +1,6 @@
 /* =========================
    VARIÁVEIS E RESET GERAL
    ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --cor-laranja: #f97316;
@@ -52,7 +51,7 @@ header.scrolled {
 /* Link de pular para conteúdo principal (acessibilidade) */
 .skip-link {
     position: absolute;
-    top: -40px;
+    transform: translateY(-100%);
     left: 10px;
     background: var(--cor-laranja);
     color: var(--cor-black);
@@ -61,9 +60,10 @@ header.scrolled {
     border-radius: 4px;
     font-weight: 600;
     z-index: 1001;
-    transition: top 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .skip-link:focus {
+    transform: translateY(0);
     top: 10px;
 }
 
@@ -88,7 +88,7 @@ header.scrolled {
 }
 .logo-nav {
     height: 100%;
-    max-height: 70px;
+    max-height: 90px;
     display: block;
 }
 
@@ -500,6 +500,7 @@ p {
     margin: 0 auto;
 }
 .plan-card {
+    will-change: transform;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -691,6 +692,7 @@ section h2 {
     margin: 0;
 }
 .corte-trigger {
+    will-change: transform;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -809,6 +811,7 @@ section h2 {
     gap: 1.5rem;
 }
 .about-card {
+    will-change: transform;
     background-color: #1A1A1A;
     padding: 1.5rem;
     border: 1px solid rgba(249, 115, 22, 0.2);
@@ -1388,15 +1391,6 @@ section h2 {
     box-shadow: 0 8px 30px rgba(249, 115, 22, 0.2);
 }
 
-.produto-subtitle {
-    max-width: 42rem;
-    margin: 0 auto;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
 .produto-card img {
     width: calc(100% + 60px);
     height: 170px;
@@ -1821,7 +1815,7 @@ footer > small {
         height: 60px;
     }
     .logo-nav {
-        height: 35px;
+        height: 50px;
     }
     .hero-title {
         font-size: 3rem;
