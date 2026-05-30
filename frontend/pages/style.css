@@ -1,4 +1,71 @@
 /* =========================
+   BACKGROUNDS DECORATIVOS
+   ========================= */
+
+/* Dot Matrix — Sobre e Contato */
+.bg-dot-matrix {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, rgba(249,115,22,0.07) 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+/* Linhas diagonais — Cortes e Produtos */
+.bg-diagonal-lines {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image: repeating-linear-gradient(
+        45deg,
+        rgba(249,115,22,0.04) 0px,
+        rgba(249,115,22,0.04) 1px,
+        transparent 1px,
+        transparent 30px
+    );
+}
+
+/* Glow radial central — Hero, Planos e Avaliações */
+.bg-glow {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(60px);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse at center, rgba(249,115,22,0.10) 0%, transparent 70%);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Glows laterais — Avaliações */
+.bg-glow-side {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    filter: blur(60px);
+    width: 400px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(249,115,22,0.10) 0%, transparent 70%);
+}
+.bg-glow-side--left {
+    left: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bg-glow-side--right {
+    right: -200px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* No Hero o glow precisa ficar acima do overlay ::before (z-index:1) */
+.hero .bg-glow { z-index: 2; }
+
+/* =========================
    VARIÁVEIS E RESET GERAL
    ========================= */
 
@@ -457,11 +524,14 @@ p {
    ========================= */
 .planos-section {
     position: relative;
+    overflow: hidden;
     padding: 3rem 1rem;
-    background-color: #101010;
+    background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
     margin-top: -30px;
 }
 .planos-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -648,10 +718,13 @@ section h2 {
    ========================= */
 .cortes-section {
     position: relative;
+    overflow: hidden;
     padding: 3rem 1rem;
-    background-color: #0d0d0d;
+    background: linear-gradient(180deg, #0d0d0d 0%, #160e05 100%);
 }
 .cortes-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -742,10 +815,13 @@ section h2 {
    ========================= */
 .sobre-section {
     position: relative;
+    overflow: hidden;
     padding: 3rem 1rem;
-    background-color: #101010;
+    background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
 }
 .sobre-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -994,10 +1070,13 @@ section h2 {
    ========================= */
 .avaliacoes-section {
     position: relative;
+    overflow: hidden;
     padding: 3rem 1rem;
-    background-color: #0d0d0d;
+    background: linear-gradient(180deg, #0d0d0d 0%, #160e05 100%);
 }
 .avaliacoes-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -1328,11 +1407,14 @@ section h2 {
    ========================= */
 .produto-section {
     position: relative;
+    overflow: hidden;
     padding: 3rem 1rem;
-    background-color: #101010;
+    background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
 }
 
 .produto-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -1506,12 +1588,15 @@ section h2 {
 
 .contato-section {
     position: relative;
+    overflow: hidden;
     padding: 3rem 1rem;
-    background-color: #101010;
+    background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
     margin-top: -30px;
 }
 
 .contato-wrapper {
+    position: relative;
+    z-index: 1;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -1697,12 +1782,19 @@ section h2 {
    FOOTER
    ========================= */
 footer {
+    position: relative;
+    overflow: hidden;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 2rem;
     padding: 2rem;
-    background-color: #050505;
+    background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
+}
+/* Conteúdo do footer acima do bg decorativo */
+footer > *:not(.bg-dot-matrix) {
+    position: relative;
+    z-index: 1;
 }
 /* Logo do footer */
 footer .brand img {
