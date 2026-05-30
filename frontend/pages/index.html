@@ -6,7 +6,8 @@
     <!-- Performance: preconnect e preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="Imagens/imagemdefundohome.jpeg" fetchpriority="high">
+    <link rel="preload" as="image" href="Imagens/Plano de fundo Elite.webp" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&family=Oswald:wght@400;600&family=Poppins:wght@400;500;600&display=swap">
     <link rel="shortcut icon" href="Imagens/favicon.ico" type="image/x-icon">
     <title>Elite Barbearia | Barbearia Premium em Três Pontas - MG</title>
     <meta name="description" content="Elite Barbearia em Três Pontas, Minas Gerais. Cortes masculinos, barba, produtos premium e planos. Agende seu horário online!">
@@ -131,14 +132,13 @@
     </script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_CCCThNFuY8dr9tDe_7gvK68c2QXKF4I"></script>    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
     <header>
-        <a href="#home" class="skip-link" alt="Retornar para pagina principal"></a>
+        <a href="#home" class="skip-link" aria-label="Pular para o conteúdo principal"></a>
         <div class="header-container">
             <a href="#home" class="logo-link">
-                <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" class="logo-nav">
+                <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" class="logo-nav" height="90" decoding="async">
             </a>
             <nav class="menu" role="navigation" aria-label="Navegação principal" aria-hidden="false">
                 <a href="#home" class="nav-link">Home</a>
@@ -171,7 +171,7 @@
     </header> 
     <main>
         <section id="home" class="hero" aria-label="Seção Hero Elite Barbearia">
-            <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" class="logo-hero">
+            <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" class="logo-hero" width="200" height="200" decoding="async" fetchpriority="high">
             <div class="hero-content">
                 <h1 class="hero-title"><span class="highlight">ELITE</span> BARBEARIA</h1>
                 <h2 class="hero-subtitle">Onde homens se transformam</h2>
@@ -194,7 +194,7 @@
                 <div class="sobre-grid">
                     <div class="sobre-visual">
                         <div class="sobre-foto-frame">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Interior moderno da Elite Barbearia" class="sobre-foto" loading="lazy">
+                            <img src="Imagens/imagemdefundohome.jpeg" alt="Interior moderno da Elite Barbearia" class="sobre-foto" loading="lazy" decoding="async" width="400" height="500">
                         </div>
                         <div class="sobre-mapa-frame">
                             <iframe
@@ -214,7 +214,7 @@
                         <article class="about-card" aria-labelledby="titulo-missao">
                             <div class="about-card-row">
                                 <div class="about-emblem-wrap">
-                                    <img src="Imagens/Missão.png" alt="Ícone de barber pole com louros" class="about-emblem" loading="lazy">
+                                    <img src="Imagens/Missão.png" alt="Ícone de barber pole com louros" class="about-emblem" loading="lazy" decoding="async" width="64" height="64">
                                 </div>
                                 <div class="card-content">
                                     <h3 id="titulo-missao">Missão</h3>
@@ -225,7 +225,7 @@
                         <article class="about-card" aria-labelledby="titulo-visao">
                             <div class="about-card-row">
                                 <div class="about-emblem-wrap">
-                                    <img src="Imagens/Visão.png" alt="Ícone de navalhas com âncora" class="about-emblem" loading="lazy">
+                                    <img src="Imagens/Visão.png" alt="Ícone de navalhas com âncora" class="about-emblem" loading="lazy" decoding="async" width="64" height="64">
                                 </div>
                                 <div class="card-content">
                                     <h3 id="titulo-visao">Visão</h3>
@@ -236,7 +236,7 @@
                         <article class="about-card" aria-labelledby="titulo-valores">
                             <div class="about-card-row">
                                 <div class="about-emblem-wrap">
-                                    <img src="Imagens/Valores.png" alt="Ícone de leão com escudo" class="about-emblem" loading="lazy">
+                                    <img src="Imagens/Valores.png" alt="Ícone de leão com escudo" class="about-emblem" loading="lazy" decoding="async" width="64" height="64">
                                 </div>
                                 <div class="card-content">
                                     <h3 id="titulo-valores">Valores</h3>
@@ -261,82 +261,67 @@
 
                 <div class="cortes-grid" role="list">
                     <article class="corte-card" role="listitem">
-                        <div class="corte-trigger" role="button" tabindex="0" aria-label="Abrir detalhes do corte Degradê" data-index="0" data-description="Técnica precisa com transição limpa e acabamento profissional.">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Imagem de referência do corte Degradê" class="corte-image" loading="lazy" decoding="async">
-                            <div class="corte-overlay" aria-hidden="true">
-                                <h3 class="corte-category">DEGRADÊ</h3>
+                        <div class="corte-trigger">
+                            <img src="Imagens/Degradê Médio com Franja (Bowl Fade Moderno).jpeg" alt="Degradê Médio com Franja" class="corte-image" loading="lazy" decoding="async" width="400" height="500">
+                            <div class="corte-overlay">
+                                <h3 class="corte-category">Degradê Médio com Franja</h3>
+                                <p class="corte-description">Corte arredondado com franja natural caindo sobre a testa e fade médio nas laterais e nuca.</p>
                             </div>
                         </div>
                     </article>
 
                     <article class="corte-card" role="listitem">
-                        <div class="corte-trigger" role="button" tabindex="0" aria-label="Abrir detalhes do corte Corte Moderno" data-index="1" data-description="Estilo atual com linhas definidas e visual contemporâneo.">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Imagem de referência do Corte Moderno" class="corte-image" loading="lazy" decoding="async">
-                            <div class="corte-overlay" aria-hidden="true">
-                                <h3 class="corte-category">CORTE MODERNO</h3>
+                        <div class="corte-trigger">
+                            <img src="Imagens/Cacheado com Degradê Médio (Mid Fade).jpeg" alt="Cacheado com Degradê Médio" class="corte-image" loading="lazy" decoding="async" width="400" height="500">
+                            <div class="corte-overlay">
+                                <h3 class="corte-category">Cacheado com Degradê Médio</h3>
+                                <p class="corte-description">Cachos naturais preservados no topo com fade progressivo nas laterais e na nuca.</p>
                             </div>
                         </div>
                     </article>
 
                     <article class="corte-card" role="listitem">
-                        <div class="corte-trigger" role="button" tabindex="0" aria-label="Abrir detalhes do corte Barba" data-index="2" data-description="Modelagem e acabamento com presença e personalidade.">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Imagem de referência do serviço de Barba" class="corte-image" loading="lazy" decoding="async">
-                            <div class="corte-overlay" aria-hidden="true">
-                                <h3 class="corte-category">BARBA</h3>
+                        <div class="corte-trigger">
+                            <img src="Imagens/Flat Top com Fade Alto + Barba Desenhada.jpeg" alt="Flat Top com Fade Alto e Barba Desenhada" class="corte-image" loading="lazy" decoding="async" width="400" height="500">
+                            <div class="corte-overlay">
+                                <h3 class="corte-category">Flat Top com Fade Alto + Barba</h3>
+                                <p class="corte-description">Topo curtíssimo e reto (estilo americano), fade alto nas laterais e barba aparada com contorno definido.</p>
                             </div>
                         </div>
                     </article>
 
                     <article class="corte-card" role="listitem">
-                        <div class="corte-trigger" role="button" tabindex="0" aria-label="Abrir detalhes do corte Social Moderno" data-index="3" data-description="Equilíbrio perfeito entre elegância clássica e toque moderno.">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Imagem de referência do corte Social Moderno" class="corte-image" loading="lazy" decoding="async">
-                            <div class="corte-overlay" aria-hidden="true">
-                                <h3 class="corte-category">SOCIAL MODERNO</h3>
+                        <div class="corte-trigger">
+                            <img src="Imagens/Corte Clássico com Low Fade (Degradê Baixo).jpeg" alt="Corte Clássico com Low Fade" class="corte-image" loading="lazy" decoding="async" width="400" height="500">
+                            <div class="corte-overlay">
+                                <h3 class="corte-category">Corte Clássico com Low Fade</h3>
+                                <p class="corte-description">Topo curto e texturizado com degradê suave partindo da nuca. Corte limpo e discreto.</p>
                             </div>
                         </div>
                     </article>
 
                     <article class="corte-card" role="listitem">
-                        <div class="corte-trigger" role="button" tabindex="0" aria-label="Abrir detalhes do corte Premium" data-index="4" data-description="Atendimento premium com técnica refinada e atenção aos detalhes.">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Imagem de referência do corte Premium" class="corte-image" loading="lazy" decoding="async">
-                            <div class="corte-overlay" aria-hidden="true">
-                                <h3 class="corte-category">PREMIUM</h3>
+                        <div class="corte-trigger">
+                            <img src="Imagens/Cacheado com Fade + Visagismo.jpeg" alt="Cacheado com Fade e Visagismo" class="corte-image" loading="lazy" decoding="async" width="400" height="500">
+                            <div class="corte-overlay">
+                                <h3 class="corte-category">Cacheado com Fade + Visagismo</h3>
+                                <p class="corte-description">Cachos no topo com degradê nas laterais e um desenho artístico raspado na lateral da cabeça.</p>
                             </div>
                         </div>
                     </article>
 
                     <article class="corte-card" role="listitem">
-                        <div class="corte-trigger" role="button" tabindex="0" aria-label="Abrir detalhes do corte Clássico" data-index="5" data-description="Visual atemporal para quem valoriza tradição e estilo.">
-                            <img src="Imagens/imagemdefundohome.jpeg" alt="Imagem de referência do corte Clássico" class="corte-image" loading="lazy" decoding="async">
-                            <div class="corte-overlay" aria-hidden="true">
-                                <h3 class="corte-category">CLÁSSICO</h3>
+                        <div class="corte-trigger">
+                            <img src="Imagens/Degradê com Visagismo na Nuca (Desenho).jpeg" alt="Degradê com Visagismo na Nuca" class="corte-image" loading="lazy" decoding="async" width="400" height="500">
+                            <div class="corte-overlay">
+                                <h3 class="corte-category">Degradê com Visagismo na Nuca</h3>
+                                <p class="corte-description">Corte com fade médio e desenho artístico raspado na região da nuca, visto pela parte de trás.</p>
                             </div>
                         </div>
                     </article>
                 </div>
             </div>
 
-            <div class="cortes-lightbox" id="cortes-lightbox" aria-hidden="true">
-                <div class="cortes-lightbox-dialog" role="dialog" aria-modal="true" aria-labelledby="lightbox-titulo">
-                    <button type="button" class="lightbox-close" aria-label="Fechar galeria de cortes">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <button type="button" class="lightbox-nav lightbox-prev" aria-label="Ver corte anterior">
-                        <span aria-hidden="true">&#10094;</span>
-                    </button>
-                    <figure class="lightbox-figure">
-                        <img src="" alt="Visualização do corte" class="lightbox-image">
-                        <figcaption class="lightbox-caption">
-                            <h3 id="lightbox-titulo"></h3>
-                            <p class="lightbox-description secondary-text"></p>
-                            <small class="lightbox-counter"></small>
-                        </figcaption>
-                    </figure>
-                    <button type="button" class="lightbox-nav lightbox-next" aria-label="Ver próximo corte">
-                        <span aria-hidden="true">&#10095;</span>
-                    </button>
-                </div>
-            </div>
         </section>
         <section id="produtos" class="produto-section" aria-labelledby="titulo-produtos" role="region">
             <div class="produto-wrapper">
@@ -349,43 +334,69 @@
                 </div>
                 <div class="produto-cards">
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Pomada Modeladora Elite Barbearia" loading="lazy">
+                        <img src="Imagens/produto-pomada-super-wax.jpeg" alt="Dom Rofectt Super Wax - Pomada Modeladora Brilho" loading="lazy" decoding="async" width="300" height="200">
                         <div class="produto-info">
-                            <h3 class="produto-titulo">POMADA MODELADORA</h3>
+                            <h3 class="produto-titulo">Super Wax — Pomada Brilho</h3>
+                            <p class="produto-descricao">Modeladora com acabamento brilhoso. 80g.</p>
                             <p class="produto-preco">R$ 79,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi a Pomada Modeladora pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi a Super Wax pelo site e gostaria de adquirir!" class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
                                 Comprar via WhatsApp
-</a>
+                            </a>
                         </div>
                     </div>
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Óleo para Barba Elite Barbearia" loading="lazy">
+                        <img src="Imagens/produto-oleo-barba.jpeg" alt="Old Wolf - Óleo para Barba" loading="lazy" decoding="async" width="300" height="200">
                         <div class="produto-info">
-                            <h3 class="produto-titulo">ÓLEO PARA BARBA</h3>
+                            <h3 class="produto-titulo">Óleo para Barba — Old Wolf</h3>
+                            <p class="produto-descricao">Hidratação e maciez para a barba. 30ml.</p>
                             <p class="produto-preco">R$ 59,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Óleo para Barba pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Óleo para Barba pelo site e gostaria de adquirir!" class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
                                 Comprar via WhatsApp
-</a>
+                            </a>
                         </div>
                     </div>
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Shampoo Premium Elite Barbearia" loading="lazy">
+                        <img src="Imagens/produto-shampoo-3em1.jpeg" alt="Force Men #76 - Shampoo 3 em 1" loading="lazy" decoding="async" width="300" height="200">
                         <div class="produto-info">
-                            <h3 class="produto-titulo">SHAMPOO PREMIUM</h3>
+                            <h3 class="produto-titulo">Shampoo 3 em 1 — Force Men</h3>
+                            <p class="produto-descricao">Cabelo, barba e corpo. Limpa, nutre e hidrata. 250ml.</p>
                             <p class="produto-preco">R$ 49,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Shampoo Premium pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Shampoo 3 em 1 pelo site e gostaria de adquirir!" class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
                                 Comprar via WhatsApp
-</a>
+                            </a>
                         </div>
                     </div>
                     <div class="produto-card">
-                        <img src="Imagens/imagemdefundohome.jpeg" alt="Balm Hidratante Elite Barbearia" loading="lazy">
+                        <img src="Imagens/produto-balm-barba.jpeg" alt="Fox For Men - Balm para Barba" loading="lazy" decoding="async" width="300" height="200">
                         <div class="produto-info">
-                            <h3 class="produto-titulo">BALM HIDRATANTE</h3>
+                            <h3 class="produto-titulo">Balm para Barba — Fox For Men</h3>
+                            <p class="produto-descricao">Hidrata e reduz o frizz nos fios da barba. 120ml.</p>
                             <p class="produto-preco">R$ 54,90</p>
-                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Balm Hidratante pelo site e gostaria de adquirir!"class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Balm para Barba pelo site e gostaria de adquirir!" class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
                                 Comprar via WhatsApp
-</a>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="produto-card">
+                        <img src="Imagens/produto-shampoo-anticaspa.jpeg" alt="Force Men #18 - Shampoo Anti-Caspa" loading="lazy" decoding="async" width="300" height="200">
+                        <div class="produto-info">
+                            <h3 class="produto-titulo">Shampoo Anti-Caspa — Force Men</h3>
+                            <p class="produto-descricao">Limpa e hidrata. Combate coceiras e descamações. Uso diário. 250g.</p>
+                            <p class="produto-preco">R$ 49,90</p>
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi o Shampoo Anti-Caspa pelo site e gostaria de adquirir!" class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                                Comprar via WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    <div class="produto-card">
+                        <img src="Imagens/produto-pomada-red-wax.jpeg" alt="Dom Rofectt Red Wax - Pomada Modeladora Fosca" loading="lazy" decoding="async" width="300" height="200">
+                        <div class="produto-info">
+                            <h3 class="produto-titulo">Red Wax — Pomada Fosca</h3>
+                            <p class="produto-descricao">Modeladora com acabamento fosco para looks naturais e definidos. 80g.</p>
+                            <p class="produto-preco">R$ 79,90</p>
+                            <a href="https://api.whatsapp.com/send/?phone=5535998787291&text=Olá, vi a Red Wax pelo site e gostaria de adquirir!" class="whatsapp-produto" target="_blank" rel="noopener noreferrer">
+                                Comprar via WhatsApp
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -536,7 +547,7 @@
                        rel="noopener noreferrer" role="article" aria-label="Contato via WhatsApp: (35) 99878-7291">
                         <div class="contato-card-row">
                             <div class="contato-emblem-wrap">
-                                <img src="Imagens/whatsapplogo.png" alt="Ícone do WhatsApp" class="contato-emblem" loading="lazy">
+                                <img src="Imagens/whatsapplogo.png" alt="Ícone do WhatsApp" class="contato-emblem" loading="lazy" decoding="async" width="60" height="60">
                             </div>
                             <div class="contato-card-content">
                                 <h3>WhatsApp</h3>
@@ -548,7 +559,7 @@
                        rel="noopener noreferrer" role="article" aria-label="Instagram: @elitebarbearia">
                         <div class="contato-card-row">
                             <div class="contato-emblem-wrap">
-                                <img src="Imagens/instagram.png" alt="Ícone do Instagram" class="contato-emblem" loading="lazy">
+                                <img src="Imagens/instagram.png" alt="Ícone do Instagram" class="contato-emblem" loading="lazy" decoding="async" width="60" height="60">
                             </div>
                             <div class="contato-card-content">
                                 <h3>Instagram</h3>
@@ -561,7 +572,7 @@
                        aria-label="Abrir endereço no Google Maps: Nossa Senhora D'Ajuda, Centro, Três Pontas - MG">
                         <div class="contato-card-row">
                             <div class="contato-emblem-wrap">
-                                <img src="Imagens/location.png" alt="Ícone de localização" class="contato-emblem" loading="lazy">
+                                <img src="Imagens/location.png" alt="Ícone de localização" class="contato-emblem" loading="lazy" decoding="async" width="60" height="60">
                             </div>
                             <div class="contato-card-content">
                                 <h3>Endereço</h3>
@@ -591,7 +602,7 @@
     </main>
     <footer id="footer">
         <div class="brand">
-            <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" loading="lazy">
+            <img src="Imagens/Logo_sem_fundo.png" alt="Logo da Elite Barbearia" loading="lazy" decoding="async" width="120" height="60">
             <p class="secondary-text">Barbearia moderna com estilo e atitude.</p>
         </div>
         <div class="links">
@@ -616,8 +627,8 @@
         <div>
             <h3><span class="highlight">REDES SOCIAIS</span></h3>
             <div class="social-icons">
-                <a href="https://www.instagram.com/elitebarbeariatp/" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/5535998787291" target="_blank" rel="noopener noreferrer" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/elitebarbeariatp/" target="_blank" rel="noopener noreferrer" aria-label="Siga a Elite Barbearia no Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://wa.me/5535998787291" target="_blank" rel="noopener noreferrer" aria-label="Fale com a Elite Barbearia pelo WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
             </div>
         </div>
         <small class="secondary-text">© 2026 Elite Barbearia. Todos os direitos reservados.</small>
@@ -651,19 +662,6 @@
             const mobileMenu = document.querySelector('.mobile-menu');
             const mobileLinks = document.querySelectorAll('.mobile-link');
             const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
-            const corteTriggers = document.querySelectorAll('.corte-trigger');
-            const cortesLightbox = document.querySelector('#cortes-lightbox');
-            const lightboxDialog = cortesLightbox ? cortesLightbox.querySelector('.cortes-lightbox-dialog') : null;
-            const lightboxImage = cortesLightbox ? cortesLightbox.querySelector('.lightbox-image') : null;
-            const lightboxTitle = cortesLightbox ? cortesLightbox.querySelector('#lightbox-titulo') : null;
-            const lightboxDescription = cortesLightbox ? cortesLightbox.querySelector('.lightbox-description') : null;
-            const lightboxCounter = cortesLightbox ? cortesLightbox.querySelector('.lightbox-counter') : null;
-            const lightboxCloseButton = cortesLightbox ? cortesLightbox.querySelector('.lightbox-close') : null;
-            const lightboxPrevButton = cortesLightbox ? cortesLightbox.querySelector('.lightbox-prev') : null;
-            const lightboxNextButton = cortesLightbox ? cortesLightbox.querySelector('.lightbox-next') : null;
-            let activeCorteIndex = 0;
-            let focusedTriggerBeforeLightbox = null;
-
             // Efeito de scroll na barra de navegacao com otimizacao
             let ticking = false;
             window.addEventListener('scroll', function() {
@@ -764,118 +762,6 @@
                 observer.observe(section);
             });
 
-            function getCorteData(trigger) {
-                const image = trigger.querySelector('.corte-image');
-                const title = trigger.querySelector('.corte-category');
-                const description = trigger.getAttribute('data-description');
-
-                return {
-                    src: image ? image.getAttribute('src') : '',
-                    alt: image ? image.getAttribute('alt') : '',
-                    title: title ? title.textContent.trim() : '',
-                    description: description ? description.trim() : ''
-                };
-            }
-
-            function renderLightbox(index) {
-                const trigger = corteTriggers[index];
-                if (!trigger || !lightboxImage || !lightboxTitle || !lightboxDescription || !lightboxCounter) {
-                    return;
-                }
-
-                const data = getCorteData(trigger);
-                lightboxImage.setAttribute('src', data.src);
-                lightboxImage.setAttribute('alt', data.alt);
-                lightboxTitle.textContent = data.title;
-                lightboxDescription.textContent = data.description;
-                lightboxCounter.textContent = `${index + 1} / ${corteTriggers.length}`;
-                activeCorteIndex = index;
-            }
-
-            function openLightbox(index, triggerElement) {
-                if (!cortesLightbox || !lightboxDialog) {
-                    return;
-                }
-
-                focusedTriggerBeforeLightbox = triggerElement || null;
-                renderLightbox(index);
-                cortesLightbox.classList.add('active');
-                cortesLightbox.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('modal-open');
-                lightboxCloseButton.focus();
-            }
-
-            function closeLightbox() {
-                if (!cortesLightbox) {
-                    return;
-                }
-
-                cortesLightbox.classList.remove('active');
-                cortesLightbox.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('modal-open');
-
-                if (focusedTriggerBeforeLightbox) {
-                    focusedTriggerBeforeLightbox.focus();
-                }
-            }
-
-            function goToNextCorte() {
-                const nextIndex = (activeCorteIndex + 1) % corteTriggers.length;
-                renderLightbox(nextIndex);
-            }
-
-            function goToPrevCorte() {
-                const prevIndex = (activeCorteIndex - 1 + corteTriggers.length) % corteTriggers.length;
-                renderLightbox(prevIndex);
-            }
-
-            corteTriggers.forEach((trigger, index) => {
-                trigger.addEventListener('click', () => {
-                    openLightbox(index, trigger);
-                });
-
-                trigger.addEventListener('keydown', event => {
-                    if (event.key === 'Enter' || event.key === ' ') {
-                        event.preventDefault();
-                        openLightbox(index, trigger);
-                    }
-                });
-            });
-
-            if (lightboxPrevButton) {
-                lightboxPrevButton.addEventListener('click', goToPrevCorte);
-            }
-
-            if (lightboxNextButton) {
-                lightboxNextButton.addEventListener('click', goToNextCorte);
-            }
-
-            if (lightboxCloseButton) {
-                lightboxCloseButton.addEventListener('click', closeLightbox);
-            }
-
-            if (cortesLightbox) {
-                cortesLightbox.addEventListener('click', event => {
-                    if (event.target === cortesLightbox) {
-                        closeLightbox();
-                    }
-                });
-            }
-
-            document.addEventListener('keydown', event => {
-                if (!cortesLightbox || !cortesLightbox.classList.contains('active')) {
-                    return;
-                }
-
-                if (event.key === 'Escape') {
-                    closeLightbox();
-                } else if (event.key === 'ArrowRight') {
-                    goToNextCorte();
-                } else if (event.key === 'ArrowLeft') {
-                    goToPrevCorte();
-                }
-            });
-
             if(window.location.search || window.location.hash) {
                 window.history.replaceState(null,'',window.location.pathname)
             }
@@ -935,14 +821,10 @@
             })();
         });
     </script>
-    <script>lucide.createIcons();</script>
-
-    <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollSmoother.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollToPlugin.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js" defer></script>
+    <script src="js/script.js" defer></script>
 
     <script>
     (function () {

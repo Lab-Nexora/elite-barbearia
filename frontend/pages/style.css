@@ -1,7 +1,6 @@
 /* =========================
    VARIÁVEIS E RESET GERAL
    ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --cor-laranja: #f97316;
@@ -54,7 +53,7 @@ header.scrolled {
 /* Link de pular para conteúdo principal (acessibilidade) */
 .skip-link {
     position: absolute;
-    top: -40px;
+    transform: translateY(-100%);
     left: 10px;
     background: var(--cor-laranja);
     color: var(--cor-black);
@@ -63,9 +62,10 @@ header.scrolled {
     border-radius: 4px;
     font-weight: 600;
     z-index: 1001;
-    transition: top 0.3s ease;
+    transition: transform 0.3s ease;
 }
 .skip-link:focus {
+    transform: translateY(0);
     top: 10px;
 }
 
@@ -90,7 +90,7 @@ header.scrolled {
 }
 .logo-nav {
     height: 100%;
-    max-height: 70px;
+    max-height: 90px;
     display: block;
 }
 
@@ -295,6 +295,9 @@ header.scrolled {
     margin: auto;
     margin-bottom: 1rem;
     width: 200px;
+    position: relative;
+    z-index: 2;
+    filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.7));
 }
 
 /* Seção hero (destaque principal) */
@@ -307,7 +310,7 @@ header.scrolled {
     align-items: center;
     justify-content: center;
     padding: 6rem 2rem 3rem;
-    background-image: url('Imagens/imagemdefundohome.jpeg');
+    background-image: url('Imagens/Plano de fundo Elite.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -458,6 +461,7 @@ p {
     position: relative;
     padding: 3rem 1rem;
     background-color: #101010;
+    margin-top: -30px;
 }
 .planos-wrapper {
     max-width: 1280px;
@@ -498,6 +502,10 @@ p {
     margin: 0 auto;
 }
 .plan-card {
+    will-change: transform;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: linear-gradient(180deg, #1a1a1a 0%, #141414 100%);
     border: 1px solid rgba(249, 115, 22, 0.25);
     border-radius: 10px;
@@ -560,6 +568,7 @@ p {
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 .plan-benefits li {
     display: flex;
@@ -576,6 +585,7 @@ p {
 }
 .plan-cta {
     display: block;
+    margin-top: auto;
     margin-top: 1.5rem;
     padding: 0.75rem 1.5rem;
     background: #f97316;
@@ -684,159 +694,49 @@ section h2 {
     margin: 0;
 }
 .corte-trigger {
+    will-change: transform;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     aspect-ratio: 4 / 5;
     border: 1px solid rgba(249, 115, 22, 0.2);
     background: #151515;
-    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .corte-trigger:hover {
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-    border-color: rgba(249, 115, 22, 0.5);
-}
-.corte-trigger:focus-visible {
-    outline: 3px solid rgba(249, 115, 22, 0.85);
-    outline-offset: 4px;
-    transform: translateY(-5px) scale(1.01);
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
-    border-color: rgba(249, 115, 22, 0.5);
+    transform: translateY(-4px);
+    border-color: rgba(249, 115, 22, 0.45);
+    box-shadow: 0 8px 30px rgba(249, 115, 22, 0.2);
 }
 .corte-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.5s ease;
-}
-.corte-trigger:hover .corte-image,
-.corte-trigger:focus-visible .corte-image {
-    transform: scale(1.08);
 }
 .corte-overlay {
     position: absolute;
     inset: auto 0 0 0;
-    padding: 2rem 1.2rem 1.2rem;
-    background: linear-gradient(to top, rgba(10, 10, 10, 0.92), rgba(10, 10, 10, 0));
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    padding: 1.2rem;
+    background: rgba(10, 10, 10, 0.78);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-top: 1px solid rgba(249, 115, 22, 0.15);
 }
 .corte-category {
     margin: 0;
-    color: var(--cor-white);
+    color: var(--cor-laranja);
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
-
-/* =========================
-   CORTES LIGHTBOX
-   ========================= */
-.cortes-lightbox {
-    position: fixed;
-    inset: 0;
-    z-index: 2000;
-    display: grid;
-    place-items: center;
-    background: rgba(0, 0, 0, 0.88);
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
-    padding: 1rem;
-}
-.cortes-lightbox.active {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-}
-.cortes-lightbox-dialog {
-    position: relative;
-    width: min(980px, 100%);
-    background: #141414;
-    border: 1px solid rgba(249, 115, 22, 0.35);
-    border-radius: 12px;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 0.75rem;
-}
-.lightbox-close {
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    width: 42px;
-    height: 42px;
-    border: 1px solid rgba(249, 115, 22, 0.4);
-    border-radius: 999px;
-    background: rgba(16, 16, 16, 0.95);
-    color: var(--cor-white);
-    font-size: 1.7rem;
-    line-height: 1;
-    cursor: pointer;
-}
-.lightbox-nav {
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(249, 115, 22, 0.4);
-    border-radius: 999px;
-    background: rgba(16, 16, 16, 0.95);
-    color: var(--cor-white);
-    font-size: 1.3rem;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
-}
-.lightbox-nav:hover,
-.lightbox-nav:focus-visible,
-.lightbox-close:hover,
-.lightbox-close:focus-visible {
-    background-color: rgba(249, 115, 22, 0.25);
-    transform: scale(1.05);
-    outline: 2px solid rgba(249, 115, 22, 0.75);
-    outline-offset: 2px;
-}
-.lightbox-figure {
-    margin: 0;
-}
-.lightbox-image {
-    display: block;
-    width: 100%;
-    max-height: min(68vh, 640px);
-    object-fit: contain;
-    border-radius: 8px;
-    background: #090909;
-}
-.lightbox-caption {
-    margin-top: 1rem;
-}
-.lightbox-caption h3 {
-    margin: 0;
-    color: var(--cor-laranja);
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-.lightbox-description {
-    margin: 0.45rem 0 0;
-    color: rgba(255, 255, 255, 0.75);
-    line-height: 1.6;
-}
-.lightbox-counter {
-    display: inline-block;
-    margin-top: 0.8rem;
-    color: rgba(255, 255, 255, 0.65);
-    letter-spacing: 0.06em;
-}
-body.modal-open {
-    overflow: hidden;
+.corte-description {
+    margin: 0.35rem 0 0;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.82rem;
+    line-height: 1.5;
 }
 
 /* =========================
@@ -913,6 +813,7 @@ body.modal-open {
     gap: 1.5rem;
 }
 .about-card {
+    will-change: transform;
     background-color: #1A1A1A;
     padding: 1.5rem;
     border: 1px solid rgba(249, 115, 22, 0.2);
@@ -1492,15 +1393,6 @@ body.modal-open {
     box-shadow: 0 8px 30px rgba(249, 115, 22, 0.2);
 }
 
-.produto-subtitle {
-    max-width: 42rem;
-    margin: 0 auto;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
 .produto-card img {
     width: calc(100% + 60px);
     height: 170px;
@@ -1521,6 +1413,13 @@ body.modal-open {
     letter-spacing: 0.04em;
 }
 
+.produto-descricao {
+    margin: 0.4rem 0 0;
+    text-align: center;
+    color: #A0A0A0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
 .produto-preco {
     margin: 0.8rem 0 0;
     text-align: center;
@@ -1611,6 +1510,7 @@ body.modal-open {
     position: relative;
     padding: 3rem 1rem;
     background-color: #101010;
+    margin-top: -30px;
 }
 
 .contato-wrapper {
@@ -1917,7 +1817,7 @@ footer > small {
         height: 60px;
     }
     .logo-nav {
-        height: 35px;
+        height: 50px;
     }
     .hero-title {
         font-size: 3rem;
@@ -1969,25 +1869,6 @@ footer > small {
     .corte-trigger {
         aspect-ratio: auto;
         height: 250px;
-    }
-    .cortes-lightbox-dialog {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1rem 0.85rem 1.25rem;
-    }
-    .lightbox-nav {
-        width: 100%;
-        border-radius: 10px;
-        height: 40px;
-    }
-    .lightbox-prev {
-        order: 2;
-    }
-    .lightbox-figure {
-        order: 1;
-    }
-    .lightbox-next {
-        order: 3;
     }
 }
 @media (max-width: 480px) {
@@ -2113,7 +1994,7 @@ footer > small {
     .whatsapp-card {
         width: 55px;
         height: 55px;
-        bottom: 15px;
+        bottom: 40px;
         right: 8px;
     }
 
@@ -2222,8 +2103,8 @@ footer > small {
    ========================= */
 .back-to-top {
     position: fixed;
-    bottom: 85px;
-    right: 20px;
+    bottom: 90px;
+    right: 25px;
     z-index: 9998;
     width: 48px;
     height: 48px;
@@ -2252,8 +2133,8 @@ footer > small {
 }
 @media (max-width: 768px) {
     .back-to-top {
-        bottom: 80px;
-        right: 12px;
+        bottom: 102px;
+        right: 15px;
         width: 42px;
         height: 42px;
     }
