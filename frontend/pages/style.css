@@ -1571,9 +1571,10 @@ section h2 {
     }
     .produto-card img {
         width: calc(100% + 40px);
-        margin: -20px -20px 0;
-        margin-bottom: 16px;
-        height: 160px;
+        margin: -20px -20px 16px;
+        aspect-ratio: 14 / 9;
+        height: auto;
+        object-fit: cover;
     }
     .produto-preco {
         font-size: 2rem;
@@ -1922,7 +1923,9 @@ footer > small {
         font-size: 0.95rem;
     }
     .logo-hero {
-        width: 150px;
+        width: 140px;
+        height: auto;
+        margin-bottom: 1rem;
     }
     footer {
         flex-direction: column;
@@ -1959,8 +1962,7 @@ footer > small {
         height: 36px;
     }
     .corte-trigger {
-        aspect-ratio: auto;
-        height: 250px;
+        min-height: 300px;
     }
 }
 @media (max-width: 480px) {
@@ -2006,8 +2008,7 @@ footer > small {
         gap: 0.85rem;
     }
     .corte-trigger {
-        aspect-ratio: auto;
-        height: 220px;
+        min-height: 300px;
     }
 
     /* Sobre */
