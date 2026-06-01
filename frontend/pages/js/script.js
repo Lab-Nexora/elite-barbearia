@@ -50,10 +50,7 @@ window.addEventListener('load', () => {
 // ANIMACAO DE SCROLL E PULSACAO DA NAVBAR
 let pulseAnimation = gsap.to("header", {
     boxShadow: "0px 5px 25px rgba(255,140,0,0.8)",
-    repeat: -1,
-    yoyo: true,
-    duration: 1.85,
-    ease: "power1.inOut",
+    yoyo: false,
     paused: true
 });
 
