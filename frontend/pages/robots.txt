@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://barbeariaelitetp.netlify.app/sitemap.xml
+Sitemap: https://elitebarbearia.pages.dev/sitemap.xml
