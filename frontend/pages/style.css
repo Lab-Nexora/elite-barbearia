@@ -2233,3 +2233,7 @@ footer > small {
         height: 42px;
     }
 }
+body.menu-aberto .back-to-top {
+    opacity: 0;
+    pointer-events: none;
+}

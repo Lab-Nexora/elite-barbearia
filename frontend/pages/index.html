@@ -698,8 +698,10 @@
                 // Bloqueia scroll quando menu está aberto
                 if (mobileMenu.classList.contains('active')) {
                     document.body.style.overflow = 'hidden';
+                    document.body.classList.add('menu-aberto');
                 } else {
                     document.body.style.overflow = '';
+                    document.body.classList.remove('menu-aberto');
                 }
             });
 
@@ -711,6 +713,7 @@
                     hamburger.setAttribute('aria-expanded', 'false');
                     mobileMenu.setAttribute('aria-hidden', 'true');
                     document.body.style.overflow = ''; // Libera scroll
+                    document.body.classList.remove('menu-aberto');
                 }
             });
 
@@ -721,6 +724,7 @@
                     hamburger.setAttribute('aria-expanded', 'false');
                     mobileMenu.setAttribute('aria-hidden', 'true');
                     document.body.style.overflow = '';
+                    document.body.classList.remove('menu-aberto');
                 });
             });
 
