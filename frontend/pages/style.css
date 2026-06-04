@@ -156,8 +156,8 @@ header.scrolled {
     opacity: 0.9;
 }
 .logo-nav {
-    height: 100%;
-    max-height: 90px;
+    height: 70px;
+    width: auto;
     display: block;
 }
 
@@ -362,6 +362,7 @@ header.scrolled {
     margin: auto;
     margin-bottom: 1rem;
     width: 200px;
+    height: auto;
     position: relative;
     z-index: 2;
     filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.7));
