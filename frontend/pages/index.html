@@ -530,13 +530,6 @@
 
                 <div class="avaliacoes-dots" id="avaliacoes-dots" role="tablist" aria-label="Navegação do carrossel de avaliações"></div>
 
-                <div class="avaliacoes-pause-wrap">
-                    <button id="avaliacoes-pause" class="avaliacoes-pause-btn" type="button"
-                            aria-label="Pausar carrossel de avaliações" aria-pressed="false">
-                        <i class="fa-solid fa-pause" aria-hidden="true"></i>
-                    </button>
-                </div>
-
                 <div class="avaliacoes-cta-wrapper">
                     <a href="https://www.google.com/maps/place/Elite+Barbearia/@-21.3743847,-45.5108926,19z/data=!4m8!3m7!1s0x94ca83b79324f893:0x3db6902b7c755393!8m2!3d-21.3743847!4d-45.5108926!9m1!1b1!16s%2Fg%2F11xvyjd680?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
                        class="btn-primary" target="_blank" rel="noopener">
@@ -969,12 +962,6 @@
         function startAuto() { autoPlayTimer = setInterval(goNext, 5500); }
         function stopAuto() { clearInterval(autoPlayTimer); }
 
-        var outer = document.querySelector('.avaliacoes-carousel-outer');
-        if (outer) {
-            outer.addEventListener('mouseenter', stopAuto);
-            outer.addEventListener('mouseleave', startAuto);
-        }
-
         var txStart = 0;
         trackWrapper.addEventListener('touchstart', function (e) { txStart = e.touches[0].clientX; stopAuto(); }, { passive: true });
         trackWrapper.addEventListener('touchend', function (e) {
@@ -1002,25 +989,6 @@
             });
         }, { threshold: 0.15 });
         animEls.forEach(function (el) { io.observe(el); });
-
-        var pauseBtn = document.getElementById('avaliacoes-pause');
-        var isPaused = false;
-        if (pauseBtn) {
-            pauseBtn.addEventListener('click', function () {
-                isPaused = !isPaused;
-                if (isPaused) {
-                    stopAuto();
-                    pauseBtn.setAttribute('aria-label', 'Retomar carrossel de avaliações');
-                    pauseBtn.setAttribute('aria-pressed', 'true');
-                    pauseBtn.querySelector('i').className = 'fa-solid fa-play';
-                } else {
-                    startAuto();
-                    pauseBtn.setAttribute('aria-label', 'Pausar carrossel de avaliações');
-                    pauseBtn.setAttribute('aria-pressed', 'false');
-                    pauseBtn.querySelector('i').className = 'fa-solid fa-pause';
-                }
-            });
-        }
 
         refresh();
         startAuto();
