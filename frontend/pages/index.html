@@ -157,7 +157,7 @@
                 <span class="hamburger-line"></span>
             </button>
         </div>
-        <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu" id="mobile-menu" aria-hidden="true" inert>
             <nav class="mobile-nav">
                 <a href="#home" class="mobile-link">Home</a>
                 <a href="#sobre" class="mobile-link">Sobre</a>
@@ -687,6 +687,11 @@
                 const expanded = hamburger.getAttribute('aria-expanded') === 'true';
                 hamburger.setAttribute('aria-expanded', !expanded);
                 mobileMenu.setAttribute('aria-hidden', expanded);
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenu.removeAttribute('inert');
+                } else {
+                    mobileMenu.setAttribute('inert', '');
+                }
 
                 // Bloqueia scroll quando menu está aberto
                 if (mobileMenu.classList.contains('active')) {
@@ -705,6 +710,7 @@
                     mobileMenu.classList.remove('active');
                     hamburger.setAttribute('aria-expanded', 'false');
                     mobileMenu.setAttribute('aria-hidden', 'true');
+                    mobileMenu.setAttribute('inert', '');
                     document.body.style.overflow = ''; // Libera scroll
                     document.body.classList.remove('menu-aberto');
                 }
@@ -716,6 +722,7 @@
                     mobileMenu.classList.remove('active');
                     hamburger.setAttribute('aria-expanded', 'false');
                     mobileMenu.setAttribute('aria-hidden', 'true');
+                    mobileMenu.setAttribute('inert', '');
                     document.body.style.overflow = '';
                     document.body.classList.remove('menu-aberto');
                 });

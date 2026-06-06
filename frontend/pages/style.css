@@ -583,7 +583,7 @@ header.scrolled {
 .sobre-section {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: clamp(3rem, 5vw, 5.5rem) 1rem;
     background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
 }
 .sobre-wrapper {
@@ -599,7 +599,7 @@ header.scrolled {
 }
 .sobre-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.2rem, 5vw, 5rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 2px;
@@ -712,7 +712,7 @@ header.scrolled {
 .cortes-section {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: clamp(3rem, 5vw, 5.5rem) 1rem;
     background: linear-gradient(180deg, #0d0d0d 0%, #160e05 100%);
 }
 .cortes-wrapper {
@@ -728,7 +728,7 @@ header.scrolled {
 }
 .cortes-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
     font-weight: 700;
     line-height: 1;
     letter-spacing: 2px;
@@ -809,7 +809,7 @@ header.scrolled {
 .produto-section {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: clamp(3rem, 7vw, 8rem) 1rem;
     background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
 }
 
@@ -828,7 +828,7 @@ header.scrolled {
 
 .produto-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
     line-height: 1;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -939,7 +939,7 @@ header.scrolled {
 .planos-section {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: clamp(3rem, 7vw, 8rem) 1rem;
     background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
     margin-top: -30px;
 }
@@ -956,7 +956,7 @@ header.scrolled {
 }
 .planos-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
     line-height: 1;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1102,7 +1102,7 @@ header.scrolled {
 .avaliacoes-section {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: clamp(3rem, 7vw, 8rem) 1rem;
     background: linear-gradient(180deg, #0d0d0d 0%, #160e05 100%);
 }
 .avaliacoes-wrapper {
@@ -1125,7 +1125,7 @@ header.scrolled {
 }
 .avaliacoes-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
     line-height: 1;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1411,7 +1411,7 @@ header.scrolled {
 .contato-section {
     position: relative;
     overflow: hidden;
-    padding: 3rem 1rem;
+    padding: clamp(3rem, 7vw, 8rem) 1rem;
     background: linear-gradient(180deg, #101010 0%, #1a1208 100%);
     margin-top: -30px;
 }
@@ -1430,7 +1430,7 @@ header.scrolled {
 
 .contato-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 2.5rem;
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
     line-height: 1;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -1772,51 +1772,33 @@ body.menu-aberto .back-to-top {
     }
 }
 @media (min-width: 768px) {
-    .planos-section {
-        padding: 5.5rem 1rem;
-    }
     .planos-wrapper {
         padding: 0 3rem;
     }
     .planos-header {
         margin-bottom: 3.5rem;
     }
-    .planos-title {
-        font-size: 4rem;
-    }
     .planos-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 2rem;
     }
 
-    .cortes-section {
-        padding: 5.5rem 1rem;
-    }
     .cortes-wrapper {
         padding: 0 3rem;
     }
     .cortes-header {
         margin-bottom: 3.5rem;
     }
-    .cortes-title {
-        font-size: 4rem;
-    }
     .cortes-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 1.5rem;
     }
 
-    .sobre-section {
-        padding: 5.5rem 1rem;
-    }
     .sobre-wrapper {
         padding: 0 3rem;
     }
     .sobre-header {
         margin-bottom: 3.5rem;
-    }
-    .sobre-title {
-        font-size: 4rem;
     }
     .sobre-visual {
         gap: 2rem;
@@ -1844,42 +1826,27 @@ body.menu-aberto .back-to-top {
     }
 }
 @media (min-width: 1024px) {
-    .planos-section {
-        padding: 8rem 1rem;
-    }
     .planos-wrapper {
         padding: 0 5rem;
     }
     .planos-header {
         margin-bottom: 4rem;
     }
-    .planos-title {
-        font-size: 4.5rem;
-    }
     .planos-grid {
         gap: 2rem;
     }
 
-    .cortes-section {
-        padding: 5rem 1rem;
-    }
     .cortes-wrapper {
         padding: 0 5rem;
     }
     .cortes-header {
         margin-bottom: 4rem;
     }
-    .cortes-title {
-        font-size: 4.5rem;
-    }
     .cortes-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 1.5rem;
     }
 
-    .sobre-section {
-        padding: 5rem 1rem;
-    }
     .sobre-wrapper {
         padding: 0 5rem;
     }
@@ -1890,9 +1857,6 @@ body.menu-aberto .back-to-top {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 4rem;
     }
-    .sobre-title {
-        font-size: 5rem;
-    }
     .sobre-mapa-frame {
         height: 400px;
     }
@@ -1900,17 +1864,13 @@ body.menu-aberto .back-to-top {
 
 /* --- Avaliações --- */
 @media (min-width: 768px) {
-    .avaliacoes-section { padding: 5.5rem 1rem; }
     .avaliacoes-wrapper { padding: 0 3rem; }
     .avaliacoes-header { margin-bottom: 3rem; }
-    .avaliacoes-title { font-size: 4rem; }
     .avaliacoes-stats { margin-bottom: 3.5rem; }
 }
 @media (min-width: 1024px) {
-    .avaliacoes-section { padding: 8rem 1rem; }
     .avaliacoes-wrapper { padding: 0 5rem; }
     .avaliacoes-header { margin-bottom: 3.5rem; }
-    .avaliacoes-title { font-size: 4.5rem; }
 }
 @media (max-width: 767px) {
     .avaliacoes-stats { gap: 1.5rem; margin-bottom: 2rem; }
@@ -1928,17 +1888,13 @@ body.menu-aberto .back-to-top {
 
 /* --- Produtos --- */
 @media (min-width: 768px) {
-    .produto-section { padding: 5.5rem 1rem; }
     .produto-wrapper { padding: 0 3rem; }
     .produto-header { margin-bottom: 3.5rem; }
-    .produto-title { font-size: 3.5rem; }
     .produto-card img { height: 200px; }
 }
 @media (min-width: 1024px) {
-    .produto-section { padding: 8rem 1rem; }
     .produto-wrapper { padding: 0 5rem; }
     .produto-header { margin-bottom: 4rem; }
-    .produto-title { font-size: 4rem; }
     .produto-card img { height: 220px; }
 }
 @media (max-width: 767px) {
@@ -1976,14 +1932,10 @@ body.menu-aberto .back-to-top {
 
 /* --- Contato --- */
 @media (min-width: 768px) {
-    .contato-section { padding: 5.5rem 1rem; }
     .contato-wrapper { padding: 0 3rem; }
-    .contato-title { font-size: 3.5rem; }
 }
 @media (min-width: 1024px) {
-    .contato-section { padding: 8rem 1rem; }
     .contato-wrapper { padding: 0 5rem; }
-    .contato-title { font-size: 4rem; }
     .contato-emblem-wrap { width: 64px; height: 64px; }
 }
 @media (max-width: 767px) {
@@ -2197,15 +2149,6 @@ body.menu-aberto .back-to-top {
         padding: 0 0.65rem;
     }
 
-    /* Títulos pequenos */
-    .planos-title,
-    .cortes-title,
-    .sobre-title,
-    .produto-title,
-    .contato-title,
-    .avaliacoes-title {
-        font-size: 2.2rem;
-    }
 }
 
 /* --- Elementos flutuantes --- */
