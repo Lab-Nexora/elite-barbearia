@@ -1208,6 +1208,8 @@ header.scrolled {
 .avaliacoes-track-wrapper {
     flex: 1;
     overflow: hidden;
+    /* folga vertical para o card não ser cortado ao subir no hover */
+    padding: 12px 0;
 }
 .avaliacoes-track {
     display: flex;

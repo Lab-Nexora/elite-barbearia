@@ -492,10 +492,47 @@
                     <div class="section-divider"></div>
                     <p class="avaliacoes-subtitle secondary-text">O que nossos clientes dizem sobre nós</p>
                 </div>
-                
-                
-            <div class="elfsight-app-e7b0e1c4-0769-4d04-a31d-20dd631f3a6e" data-elfsight-app-lazy></div>
-
+                <div class="avaliacoes-stats">
+                    <div class="avaliacoes-stat">
+                        <p class="stat-numero">5.0</p>
+                        <div class="stat-estrelas" aria-label="5.0 de 5 estrelas">
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                            <i class="fa-solid fa-star" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="avaliacoes-stat-divider" aria-hidden="true"></div>
+                    <div class="avaliacoes-stat">
+                        <p class="stat-numero">85</p>
+                        <p class="stat-label secondary-text">Avaliações</p>
+                    </div>
+                    <div class="avaliacoes-stat-divider" aria-hidden="true"></div>
+                    <div class="avaliacoes-stat">
+                        <p class="stat-numero">100%</p>
+                        <p class="stat-label secondary-text">Clientes Satisfeitos</p>
+                    </div>
+                </div>
+                <div class="avaliacoes-carousel-outer">
+                    <button class="avaliacoes-nav avaliacoes-prev" type="button" aria-label="Avaliação anterior">
+                        <span aria-hidden="true">&#10094;</span>
+                    </button>
+                    <div class="avaliacoes-track-wrapper" aria-live="polite" aria-label="Carrossel de avaliações">
+                        <div class="avaliacoes-track" id="avaliacoes-track"></div>
+                    </div>
+                    <button class="avaliacoes-nav avaliacoes-next" type="button" aria-label="Próxima avaliação">
+                        <span aria-hidden="true">&#10095;</span>
+                    </button>
+                </div>
+                <div class="avaliacoes-dots" id="avaliacoes-dots" role="tablist" aria-label="Navegação do carrossel de avaliações"></div>
+                <div class="avaliacoes-cta-wrapper">
+                    <a href="https://www.google.com/maps/place/Elite+Barbearia/@-21.3743847,-45.5108926,19z/data=!4m8!3m7!1s0x94ca83b79324f893:0x3db6902b7c755393!8m2!3d-21.3743847!4d-45.5108926!9m1!1b1!16s%2Fg%2F11xvyjd680?hl=pt-BR&entry=ttu&g_ep=EgoyMDI2MDUyMC4wIKXMDSoASAFQAw%3D%3D"
+                       class="btn-primary" target="_blank" rel="noopener">
+                        Deixe sua Avaliação
+                    </a>
+                </div>
+            </div>
         </section>
         <section id="contato" class="contato-section" aria-labelledby="titulo-contato" role="region">
             <div class="bg-dot-matrix" aria-hidden="true"></div>
@@ -812,7 +849,6 @@
             }
         }   
     </script>
-    <script src="https://elfsightcdn.com/platform.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
     <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
@@ -822,14 +858,16 @@
     <script>
     (function () {
         var avaliacoes = [
-            { nome: 'Rafael Silva',    inicial: 'R', cor: '#f97316', servico: 'Corte + Barba',    nota: 5, texto: 'Melhor barbearia da cidade! Saí diferente, com estilo e muita confiança. Atendimento impecável do começo ao fim.', tempo: 'há 1 semana' },
-            { nome: 'Carlos Eduardo',  inicial: 'C', cor: '#e55a0d', servico: 'Degradê',           nota: 5, texto: 'Primeira vez que fui e já virei cliente fiel. O ambiente é top, os profissionais sabem o que fazem. Muito satisfeito!', tempo: 'há 2 semanas' },
-            { nome: 'Marcos Antônio',  inicial: 'M', cor: '#c2410c', servico: 'Corte Moderno',    nota: 5, texto: 'Saí com um corte incrível. Muito cuidadoso com os detalhes, entendeu exatamente o que eu queria. Recomendo a todos.', tempo: 'há 3 semanas' },
-            { nome: 'João Pedro',      inicial: 'J', cor: '#ea580c', servico: 'Barba',             nota: 5, texto: 'A barba ficou impecável! Atendimento nota 10, ambiente super agradável e preço totalmente justo. Já sou cliente fiel.', tempo: 'há 1 mês' },
-            { nome: 'Thiago Oliveira', inicial: 'T', cor: '#fb923c', servico: 'Plano Premium',    nota: 5, texto: 'Vale cada centavo do plano! Corte e barba toda semana, sempre bem-feito. Profissionalismo total desde o primeiro dia.', tempo: 'há 1 mês' },
-            { nome: 'Lucas Mendes',    inicial: 'L', cor: '#d97706', servico: 'Corte Premium',    nota: 5, texto: 'Incrível como um corte pode mudar tudo! O pessoal da Elite manda muito bem. Virei fã e indico para todos os amigos!', tempo: 'há 6 semanas' },
-            { nome: 'André Fernandes', inicial: 'A', cor: '#b45309', servico: 'Social Moderno',   nota: 5, texto: 'Ambiente sofisticado e profissional. Me senti em outra categoria de barbearia. Top demais, voltarei com certeza!', tempo: 'há 2 meses' },
-            { nome: 'Bruno Alves',     inicial: 'B', cor: '#92400e', servico: 'Degradê + Barba',  nota: 5, texto: 'O melhor atendimento que já tive numa barbearia. Equipe muito qualificada e atenciosa. Voltarei sempre!', tempo: 'há 2 meses' }
+            { nome: 'Henrique Guerra',         inicial: 'H', cor: '#f97316', servico: 'Corte em Degradê',   nota: 5, texto: 'Corte sempre bem feito, buscando atender ao máximo o que o cliente quer, atendimento profissional e ambiente agradável. Recomendo demais!!', tempo: 'há 3 meses' },
+            { nome: 'Alisson Brito Bernardes', inicial: 'A', cor: '#e55a0d', servico: 'Corte + Barba',      nota: 5, texto: 'A melhor barbearia de Três Pontas, apenas! Os meninos são muito fera no corte na barba, faz a gnt sair com autoestima mais elevada, e sem contar que são brincalhões e faz a gnt se sentir muito bem! Parabéns Lucas, Luizinho e Matheus! Tamo junto galera!!!', tempo: 'há 5 meses' },
+            { nome: 'José V Vitor',            inicial: 'J', cor: '#16a34a', servico: 'Cabelo + Barba + Sobrancelha', nota: 5, texto: 'Os serviços da Elite Barbearia são excelentes. Com um ambiente descontraído e confortável, eles entregam o que há de melhor na arte da barbearia. Já cortei o cabelo, fiz minha barba e sobrancelha, qualidade impecável em todos os serviços.', tempo: 'há 9 meses' },
+            { nome: 'Lukas',                   inicial: 'L', cor: '#d97706', servico: 'Atendimento',        nota: 5, texto: 'Melhor atendimento da cidade com profissionais excelentes, educação e respeito com o cliente a todo momento!!! Recomendo demais.', tempo: 'há 5 meses' },
+            { nome: 'Gustavo Ronan Silva',     inicial: 'G', cor: '#ea580c', servico: 'Corte de Cabelo',    nota: 5, texto: 'Ótima experiência... equipe extremamente profissional! Nota 10.', tempo: 'há 3 meses' },
+            { nome: 'Luan Veiga',              inicial: 'L', cor: '#fb923c', servico: 'Atendimento',        nota: 5, texto: 'Excelentes profissionais, tratamento diferenciado! Nota 10!', tempo: 'há 3 meses' },
+            { nome: 'Guilherme Nuccini',       inicial: 'G', cor: '#c2410c', servico: 'Corte de Cabelo',    nota: 5, texto: 'Sem dúvidas a melhor barbearia da cidade, profissionais qualificados, ambiente profissional e muito contagiante! Recomendo muito!', tempo: 'há 5 meses' },
+            { nome: 'Edvaldo Dias',            inicial: 'E', cor: '#b45309', servico: 'Corte de Cabelo',    nota: 5, texto: 'Excelentes profissionais para quem busca atendimento e qualidade. Organização e pontualidade. Recomendo a todos.', tempo: 'há 7 meses' },
+            { nome: 'Luiz Otavio Moreira',     inicial: 'L', cor: '#ea580c', servico: 'Corte + Barba',      nota: 5, texto: 'Barbearia top! Ambiente muito bem organizado, atendimento atencioso e o corte ficou exatamente como eu queria. Profissionais cuidadosos e prestativos. Voltarei com certeza.', tempo: 'há 9 meses' },
+            { nome: 'Marcelo Arantes',         inicial: 'M', cor: '#92400e', servico: 'Cliente Fiel',       nota: 5, texto: 'Cliente há 5 anos, não arrisco, não troco de barbeiro, esses trazem confiança dos mais velhos até os mais novos, tenho minha preferência!', tempo: 'há 9 meses' }
         ];
 
         var track = document.getElementById('avaliacoes-track');
@@ -862,12 +900,11 @@
             track.appendChild(el);
         });
 
-        var cards = track.querySelectorAll('.avaliacao-card');
         var prevBtn = document.querySelector('.avaliacoes-prev');
         var nextBtn = document.querySelector('.avaliacoes-next');
         var trackWrapper = document.querySelector('.avaliacoes-track-wrapper');
-        var currentIndex = 0;
         var autoPlayTimer = null;
+        var isAnimating = false;
         var GAP = 24;
 
         function getVisible() {
@@ -875,24 +912,38 @@
             if (window.innerWidth >= 768) return 2;
             return 1;
         }
-        function getMaxIndex() { return Math.max(0, cards.length - getVisible()); }
 
-        function updateWidths() {
+        // Clona os primeiros cards no fim para o carrossel girar em círculo (loop infinito)
+        var originalCards = Array.prototype.slice.call(track.querySelectorAll('.avaliacao-card'));
+        var originalCount = originalCards.length;
+        var CLONES = 3; // cobre até 3 cards visíveis por vez
+        for (var ci = 0; ci < CLONES; ci++) {
+            var clone = originalCards[ci % originalCount].cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.classList.add('avaliacao-clone');
+            track.appendChild(clone);
+        }
+        var cards = track.querySelectorAll('.avaliacao-card');
+        var currentIndex = 0;
+
+        function cardWidth() {
             var vis = getVisible();
             var w = (trackWrapper.offsetWidth - GAP * (vis - 1)) / vis;
             cards.forEach(function (c) { c.style.width = w + 'px'; });
             return w;
         }
 
-        function updateTransform() {
-            var w = updateWidths();
+        function applyTransform(animate) {
+            var w = cardWidth();
+            track.style.transition = animate ? 'transform 0.5s ease-in-out' : 'none';
             track.style.transform = 'translateX(-' + (currentIndex * (w + GAP)) + 'px)';
         }
 
         function updateDots() {
             var vis = getVisible();
-            var total = Math.ceil(cards.length / vis);
-            var active = Math.floor(currentIndex / vis);
+            var total = Math.ceil(originalCount / vis);
+            var logical = ((currentIndex % originalCount) + originalCount) % originalCount;
+            var active = Math.floor(logical / vis) % total;
             dotsContainer.innerHTML = '';
             for (var i = 0; i < total; i++) {
                 (function (idx) {
@@ -902,51 +953,60 @@
                     btn.setAttribute('aria-selected', idx === active ? 'true' : 'false');
                     btn.setAttribute('aria-label', 'Página ' + (idx + 1) + ' de avaliações');
                     btn.addEventListener('click', function () {
-                        currentIndex = Math.min(idx * getVisible(), getMaxIndex());
-                        refresh();
+                        if (isAnimating) return;
+                        currentIndex = Math.min(idx * getVisible(), originalCount - 1);
+                        applyTransform(true);
+                        updateDots();
                     });
                     dotsContainer.appendChild(btn);
                 })(i);
             }
         }
 
-        function updateBtns() {
-            if (prevBtn) prevBtn.disabled = currentIndex <= 0;
-            if (nextBtn) nextBtn.disabled = currentIndex >= getMaxIndex();
-        }
-
         function refresh() {
-            updateTransform();
+            applyTransform(false);
             updateDots();
-            updateBtns();
-        }
-
-        function goTo(idx) {
-            currentIndex = Math.max(0, Math.min(idx, getMaxIndex()));
-            refresh();
         }
 
         function goNext() {
-            if (currentIndex >= getMaxIndex()) {
-                track.style.transition = 'none';
-                currentIndex = 0;
-                updateTransform();
-                requestAnimationFrame(function () {
-                    track.style.transition = '';
-                    updateDots();
-                    updateBtns();
-                });
-            } else {
-                goTo(currentIndex + 1);
-            }
+            if (isAnimating) return;
+            isAnimating = true;
+            currentIndex++;
+            applyTransform(true);
+            updateDots();
         }
 
-        function goPrev() { goTo(currentIndex - 1); }
+        function goPrev() {
+            if (isAnimating) return;
+            isAnimating = true;
+            if (currentIndex <= 0) {
+                // salta sem animar para a posição dos clones e depois anima de volta ao último card real
+                currentIndex = originalCount;
+                applyTransform(false);
+                void track.offsetWidth; // força o reflow para o salto valer
+                currentIndex = originalCount - 1;
+                applyTransform(true);
+            } else {
+                currentIndex--;
+                applyTransform(true);
+            }
+            updateDots();
+        }
+
+        // Ao terminar de passar para os clones, volta ao início sem que se perceba (loop contínuo)
+        track.addEventListener('transitionend', function (e) {
+            if (e.propertyName !== 'transform') return;
+            if (currentIndex >= originalCount) {
+                currentIndex = 0;
+                applyTransform(false);
+            }
+            isAnimating = false;
+        });
 
         if (prevBtn) prevBtn.addEventListener('click', goPrev);
         if (nextBtn) nextBtn.addEventListener('click', goNext);
 
-        function startAuto() { autoPlayTimer = setInterval(goNext, 5500); }
+        function startAuto() { stopAuto(); autoPlayTimer = setInterval(goNext, 5500); }
         function stopAuto() { clearInterval(autoPlayTimer); }
 
         var txStart = 0;
@@ -961,7 +1021,7 @@
         window.addEventListener('resize', function () {
             clearTimeout(resizeTimer);
             resizeTimer = setTimeout(function () {
-                if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+                if (currentIndex >= originalCount) currentIndex = 0;
                 refresh();
             }, 200);
         }, { passive: true });
