@@ -2158,7 +2158,7 @@ body.menu-aberto .back-to-top {
     .whatsapp-card {
         width: 55px;
         height: 55px;
-        bottom: 40px;
+        bottom: 20px;
         right: 8px;
     }
 
@@ -2184,3 +2184,4 @@ body.menu-aberto .back-to-top {
         height: 42px;
     }
 }
+

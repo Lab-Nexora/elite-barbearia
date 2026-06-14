@@ -836,10 +836,13 @@
       <div class="vw-plugin-top-wrapper"></div>
     </div>
   </div>
-  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-  <script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', function() {
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    });
   </script>
+
     <script>
         window.ACCESSIBILITY_WIDGET_CONFIG = {
             widgetPosition: {
@@ -847,9 +850,9 @@
             left: '20px',
             bottom: '20px'
             }
-        }   
+        }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/accessibility-widgets@latest/widget.js" defer></script>
     <script src="https://unpkg.com/lenis@1.3.21/dist/lenis.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js" defer></script>
